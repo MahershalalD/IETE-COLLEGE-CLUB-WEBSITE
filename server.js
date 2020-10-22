@@ -8,9 +8,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const session = require('express-session')
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({
-    extented: true
-}));
+app.use(bodyParser.urlencoded({ }));
 var temp_result ="";
 var temp_section = "";
 var temp_year = "";
