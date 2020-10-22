@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Admin</title>
+    <link rel="stylesheet" href="Adminstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- As a link -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f3542;">
+        <a class="navbar-brand" href="#">IETE ADMIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/admin">Mark Allotment <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminAnn">Annocement Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin-event">Results Annoucement</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <% neededArray.map((item,index)=>{ %>
+            <div class="event" >
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <h5>Results-Publisher---><%= item.compName %></h5>
+                        </div>
+                    </div>
+                    <hr style="border-bottom: 1px solid black;">
+                   
+                        <div class="row">
+                            <div class="col-lg-2 mb-3"><form action="/result-publish" method="POST"> 
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                   
+                                     <input type="text" class="form-control" name="change" placeholder="TYPE YES TO PUBLISH"
+                                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark" type="submit" name="compName" value="<%=item._id%>"
+                                            id="button-addon2">Publish</button>
+                                        </form>
+                                    </div>
+                                    </div>
+                            </div>
+                            <% if(item.releaseqotta ==="YES"){ %>
+                                <div class="col-lg-2" >
+                            <h1 style="background-color: green;width: 30px !important;height: 30px;border-radius: 600px;align-items: center;"> </h1>
+                            <p>PUBLISHED</p>
+                                    </div>
+                           <% } else { %>
+                            <div class="col-lg-2">
+                                <h1 style="background-color: #c23616;width: 30px !important;height: 30px;border-radius: 600px;align-items: center;">
+                                </h1>
+                                <p>NOT PUBLISHED</p>
+                           </div>
+                            <% } %>
+                            
+                            
+                        </div>
+                </div>
+            </div>
+             <h2 style="text-align: center;"><%= item.compName %></h2>   
+            <div style="overflow-x:auto;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" style="text-align: center;">Year</th>
+                        <th scope="col" style="text-align: center;">Section</th>
+                        <th scope="col" style="text-align: center;">Students Name</th>
+                        <th scope="col" style="text-align: center;">Topic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% item.compRes.map((items)=>{ %>
+                    <% if(items.Year==="Second" ){ %>
+                    <tr>
+                        <td><%= items.Year %></td>
+                        <td><%= items.Section %></td>
+                        <td><%= items.StudentName %></td>
+                        <td><%= items.Topic %></td>
+            
+                    </tr>
+                    <%} %>
+                    <%}) %>
+                    <% item.compRes.map((items,index)=>{ %>
+                    <% if(items.Year==="Third" ){ %>
+                    <tr>
+                        <td><%= items.Year %></td>
+                        <td><%= items.Section %></td>
+                        <td><%= items.StudentName %></td>
+                        <td><%= items.Topic %></td>
+                    </tr>
+                    <%} %>
+                    <%}) %>
+                    <% item.compRes.map((items,index)=>{ %>
+                    <% if(items.Year==="Fourth" ){ %>
+                    <tr>
+                        <td><%= items.Year %></td>
+                        <td><%= items.Section %></td>
+                        <td><%= items.StudentName %></td>
+                        <td><%= items.Topic %></td>
+                    </tr>
+                    <%} %>
+                    <%}) %>
+                </tbody>
+            </table>
+            <% }) %>
+            
+            </div>
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="ani.js"></script>
+</body>
+
+</html>

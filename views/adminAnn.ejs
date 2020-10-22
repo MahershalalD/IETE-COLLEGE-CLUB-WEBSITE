@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Admin</title>
+    <link rel="stylesheet" href="Adminstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f3542;">
+        <a class="navbar-brand" href="#">IETE ADMIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/admin">Mark Allotment <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminAnn">Annocement Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin-event">Results Annoucement</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="event">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-2">
+                    <h5>Event Planner</h5>
+                </div>
+            </div>
+            <hr style="border-bottom: 1px solid black;">
+            <form action="/event-manager" method="POST">
+            <div class="row">
+                <div class="col-lg-2 mb-3">
+                        <label class="sr-only" for="inlineFormInputName">Event Name</label>
+                        <input type="text" class="form-control" name="eventName" id="inlineFormInputName" placeholder="Event Name" required>
+                </div>
+                <div class="col-lg-2 mb-3">
+                    <select class="custom-select" id="inlineFormCustomSelectPref" name="eventType">
+                        <option selected>Event Type</option>
+                        <option value="Inter College">Inter College</option>
+                        <option value="Intra  College">Intra  College</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 mb-3">
+                    <label class="sr-only" for="inlineFormInputName">Event Date</label>
+                    <input type="date" class="form-control" id="inlineFormInputName" name="eventDate" placeholder="Event Date" required>
+                </div>
+                <div class="col-lg-2 mb-3">
+                    <label class="sr-only" for="inlineFormInputName">Event Time</label>
+                    <input type="time" class="form-control" id="inlineFormInputName" name="eventTime" placeholder="Event Date">
+                </div>
+                
+                <div class="col-lg-2 mb-3">
+                    <label class="sr-only" for="inlineFormInputName">Cheif Guest</label>
+                    <input type="text" class="form-control" name="eventGuest" id="inlineFormInputName" placeholder="Cheif Guest Name">
+                </div>
+                <div class="col-lg-2 mb-3">
+                    <label class="sr-only" for="inlineFormInputName">In presence of</label>
+                    <input type="text" class="form-control" name="eventPresence" id="inlineFormInputName" placeholder="In Presence of">
+                </div>
+                    <!-- <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" placeholder="No. of Paper Presented" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button" id="button-addon2">+</button>
+                            </div>
+                        </div>
+                    </div> -->
+                <div class="col-lg-2 mb-3">
+                    <label class="sr-only" for="inlineFormInputName">Event Name</label>
+                    <input type="text" class="form-control" name="eventPlace" id="inlineFormInputName" placeholder="Event place">
+                </div>
+                <div class="col-lg-2 mb-3">
+                    <button class="btn btn-dark btn-lg" type="submit" id="button-addon2">Create Event</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+        <!-- eventName : String,
+        eventType : String,
+        eventDate : String,
+        eventTime : String,
+        eventPresence : String,
+        eventPlace :String,
+        eventComp : Array -->
+            <div class="jumbotron jumbotron-fluid"
+                style="margin: 10px;background: #232526;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;color: white;">
+                <div class="container-fluid">
+                    <h1 class="display-4">Events-Ongoing</h1>
+                </div>
+            </div>
+    <% eventArray.forEach(function(found){ %>
+        <% const temp = found._id %>
+        
+    <div class="event-ongoing">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="evnet-name">
+                        <h5>Event Name :</h5>
+                        <h5"><%=found.eventName %></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="evnet-name">
+                        <h5>Event Type :</h5>
+                        <h5"><%=found.eventType %></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="evnet-name">
+                        <h5>Event Date :</h5>
+                        <h5"><%=found.eventDate %></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="evnet-name">
+                        <h5>Event Time :</h5>
+                        <h5"><%=found.eventTime %></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="evnet-name" style="display: flex;flex-direction: column;">
+                        <h5>Event Chief Guest :</h5>
+                        <h5"><%=found.eventGuest %></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="evnet-name" style="display: flex;flex-direction: column;">
+                        <h5>Event In Presence of :</h5>
+                        <h5"><%=found.eventPresence %></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="evnet-name">
+                        <h5>Event Place :</h5>
+                        <h5"><%=found.eventPlace %></h5>
+                    </div>
+                </div>
+                <% found.eventComp.forEach(function(founds,index){ %>
+                <div class="col-lg-3">
+                    <div class="evnet-name1">
+                        <div  style="height: 100%;">
+                        <h5>Event Competitions <%= index+1 %> :</h5>
+                        <h5"><%= founds.name %></h5>
+                        </div>
+                    <div style="padding: 10px;">
+                        <form class="form_id<%= founds %>" action="/del-comp" method="POST">
+                        <input type="hidden" name="UniqueId" value="<%= founds.name %>">
+                        <input type="hidden" name="compi" value="<%= found._id %>">
+                        <button class="cross" style="cursor: pointer;" type="submit" onclick="this.form.submit()">✖</button>
+                    </form>
+                    </div>
+                    </div>
+                </div>
+                <% }) %>
+                <div class="col-lg-3">
+                    <div class="evnet-name">
+                        <h5 style="margin:2px;">Add the Competitions :</h5>
+                        <hr style="border-bottom: 1px solid white;">
+                        <form action="/addComp" method="POST">
+                        <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="comp" placeholder="Competitions Name" aria-label="Recipient's username"
+                                    aria-describedby="button-addon2">
+                                    <input  type="hidden" name="eventId" value="<%= found._id %>">
+                                    <input type="hidden" name="eventName" value="<%= found.eventName %>">
+                                <div class="input-group-append">
+                                    <button class="btn btn-danger" name="UniqueId" value="<%= found._id %>" type="submit">+</button>
+                                </div>
+                            </div>
+                        </form>
+                            
+                        </div>
+                </div>
+            </div>
+            <hr style="border-bottom: 1px solid white;">
+            <div>
+                <form method="POST" action="/delete-event">
+                    <button class="btn btn-dark btn-lg" name="UniqueId" value="<%= found._id %>" type="submit">REMOVE</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+<% }) %>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="ani.js"></script>
+</body>
+
+</html>

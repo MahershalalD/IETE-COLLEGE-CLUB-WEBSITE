@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+
+.main{
+    display: grid;
+    grid-template-rows:100px 1fr ;
+    overflow: auto;
+}
+.main-container{
+    grid-row: 2/3;
+    background-image: url("images/eventback.png");
+}
+.eventName{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Didact Gothic', sans-serif;
+}

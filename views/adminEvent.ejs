@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Admin</title>
+    <link rel="stylesheet" href="Adminstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f3542;">
+        <a class="navbar-brand" href="#">IETE ADMIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/admin">Mark Allotment <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminAnn">Annocement Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin-event">Results Annoucement</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="event">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-2">
+                        <h5>Results-Planner</h5>
+                </div>
+            </div>
+            <hr style="border-bottom: 1px solid black;">
+            <form action="/result-manager" method="POST">
+                <div class="row">
+                    <div class="col-lg-2 mb-3">
+                        <select class="custom-select" id="inlineFormCustomSelectPref" name="eventType" >
+                            <option selected>Event Type</option>
+                            <% adminEventArray.forEach(function(found){ %>
+                            <option value="<%= found.eventName %>"><%= found.eventName %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <button class="btn btn-dark btn-lg" type="submit" id="button-addon2">Create Event</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- eventName : String,
+        eventType : String,
+        eventDate : String,
+        eventTime : String,
+        eventPresence : String,
+        eventPlace :String,
+        eventComp : Array -->
+    <div class="jumbotron jumbotron-fluid"
+        style="margin: 10px;background: #232526;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;color: white;">
+        <div class="container-fluid">
+            <a href="/results" style="text-decoration: none;color: white;">
+                <h1 class="display-4">Results-Ongoing  &#8599;</h1>
+            </a>
+           
+        </div>
+    </div>
+    <% if(name===needed) {%>
+                            <div class="event">
+                                <div class="container-fluid ">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <h5>Results-Planner------></h5>
+                                        </div>
+                                    </div>
+                                    <hr style="border-bottom: 1px solid black;">
+                                        <div class="row"> 
+                  <% extra.map((item,index)=>{ %>
+                        <div class="col-lg-3">
+                            <form action="/result-m" method="POST">
+                            <div class="evnet-name">
+                        <h5 style="margin:2px;"><%= item.name %></h5>
+                        <hr style="border-bottom: 1px solid white;">
+                      
+                        <select class="custom-select mb-3" id="inlineFormCustomSelectPref" name="years" required>
+                            <option selected>Year</option>
+                            <option value="Second">Second</option>
+                            <option value="Third">Third</option>
+                            <option value="Fourth">Fourth</option>
+                        </select>
+                        <select class="custom-select mb-3" id="inlineFormCustomSelectPref" name="yearse" required>
+                            <option selected>Section</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                        
+                            <div class="input-group mb-3">
+                                <input type="hidden" value="<%= item.name %>" name="compName">
+                                <input type="hidden" value="<%= index %>" name="indexName">
+                                <input type="text" class="form-control mb-3" name="sname" placeholder="Student Name"
+                                    aria-label="Recipient's username" >
+                                    <div class="input-group mb-3" aria-required="true">
+                                    <input type="text" class="form-control mb-3" name="stopic" placeholder="Topic"
+                                        aria-label="Recipient's username"></div>
+                                <div class="input-group ">
+                                    <button class="btn btn-danger " name="UniqueId" value="<%= foun %>" type="submit">Add</button>
+                                </div>
+                            </div>
+                    
+                    </div>
+                        </div>
+                </form>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</div>
+   
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="ani.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Class Performance</title>
+    <link rel="stylesheet" href="styleclass.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div>
+        <nav>
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="./images/iete.jpg" width="80px" height="60px">
+                </a>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <ul class="navbar-items">
+                <li>
+                    <a href="/points-table">Points-Table</a>
+                </li>
+                <li>
+                    <a href="/classper">Class Performance</a>
+                </li>
+                <li>
+                    <a href="/event">Events</a>
+                </li>
+                <li>
+                    <a href="/results-user">Results</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="dashboard">
+        <div class="event">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h2 style="color: white;margin-bottom: 20px;">Class Performance</h2>
+                    </div>
+                </div>
+                <hr style="border-bottom: 1px solid white;">
+                <form action="/class" method="POST">
+                            <select  id="inlineFormCustomSelectPref" name="year" class="select">
+                                <option class="option" selected>Year</option>
+                                <option class="option" value="Second Year">Second Year</option>
+                                <option class="option" value="Third Year">Third Year</option>
+                            </select>
+                            <select id="inlineFormCustomSelectPref" name="section" class="select">
+                                <option class="option" selected>Section</option>
+                                <option class="option" value="A">A</option>
+                                <option class="option" value="B">B</option>
+                                <option class="option" value="C">C</option>
+                                <option class="option" value="D">D</option>
+                            </select>
+                        <div class="col-lg-2 mb-3">
+                            <button class="btn" type="submit" id="button-addon2">Check</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+       
+                <% requiredArray.forEach((item)=>{ %>
+                    <div class="main">
+            <div class="mains"> 
+                <div class="class-name">
+                    <div style="display: flex;flex-direction: column;">
+                    <h1 style="position: absolute;top: -70px;left: 70px;padding: 0;font-size: 50px;">🏆</h1>
+                    <h1 >
+                    <%= year %> <%= item.className %>
+                </h1>
+               
+                    </div>
+            </div>
+            <div class="secondpart">
+                <div class="evnet-name">
+                    <h4>Position</h4>
+                    <h4>
+                       <% if(item.currentposition ===1){ %>
+                            0<%= item.currentposition %> <p style="font-size: 15px;color: #4cd137; font-style: italic;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Winning Position </p> 
+                       <% }else{ %>
+                            <%=item.currentposition %>
+                        <% } %>
+                        </h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Paper Presented</h4>
+                    <h4>
+                        <%=item.nopaperp %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Paper Won</h4>
+                    <h4>
+                        <%=item.nopaperw %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Paper Presented in IIT</h4>
+                    <h4>
+                        <%=item.nopaperpiit %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Paper Won IIT</h4>
+                    <h4>
+                        <%=item.nopaperwiit %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Project Presented</h4>
+                    <h4>
+                        <%=item.noprojectd %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Project Won</h4>
+                    <h4>
+                        <%=item.noprojectw %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Project Presented in IIT</h4>
+                    <h4>
+                        <%=item.noprojectdiit %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Project Won in IIT</h4>
+                    <h4>
+                        <%=item.noprojectwiit %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Technical Event Participated</h4>
+                    <h4>
+                        <%=item.notechp %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Technical event Won</h4>
+                    <h4>
+                        <%=item.notechw %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Cultural Event Participated</h4>
+                    <h4>
+                        <%=item.noculp %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Cultural Event Won</h4>
+                    <h4>
+                        <%=item.noculw %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Sports Event Participated</h4>
+                    <h4>
+                        <%=item.nospop %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>No. of Sports Event Won</h4>
+                    <h4>
+                        <%=item.nospow %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>Extra Point</h4>
+                    <h4>
+                        <%=item.extra %></h4>
+                </div>
+                <div class="evnet-name">
+                    <h4>Total</h4>
+                    <h4>
+                        <%=item.Total %></h4>
+                </div>
+            </div>
+            </div> 
+            </div>
+           <% })  %>
+        
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <script src="animation.js"></script>
+</body>
+
+</html>

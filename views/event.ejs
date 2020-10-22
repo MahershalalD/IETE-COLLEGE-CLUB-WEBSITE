@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Class Performance</title>
+    <link rel="stylesheet" href="styleevent.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div>
+        <nav>
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="./images/iete.jpg" width="80px" height="60px">
+                </a>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <ul class="navbar-items">
+                <li>
+                    <a href="/points-table">Points-Table</a>
+                </li>
+                <li>
+                    <a href="/classper">Class Performance</a>
+                </li>
+                <li>
+                    <a href="/event">Events</a>
+                </li>
+                <li>
+                    <a href="/results-user">Results</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <% eventArray.forEach((item)=>{ %>
+    <div class="main">
+       <div class="main-container">
+        <div class="eventName">
+            <h1>Kongu Engineering College,Perundurai,Erode-641305</h1>
+            <h2 style="margin-top: 20px;">Department of Electronics And Communication Engineering</h2>
+            <h3 style="margin-top: 20px;">IETE STUDENT FORUM AND ECA ASSOCIATION</h3>
+            <h4 style="margin-top: 20px;">Presents</h4>
+            <h1 style="font-size: 60px;color: #eb4d4b;"><%= item.eventName %></h1>
+           <h2 style="font-style: italic;margin-top: 20px;">Chief Guest</h2> 
+           <h1><%= item.eventGuest %></h1>
+            <h2 style="font-style: italic;margin-top: 20px;">In the Presence of</h2>
+            <h1 ><%= item.eventPresence %></h1>
+            <h2 style="font-style: italic;margin-top: 20px;">on</h2>
+            <h1><%= item.eventDate %></h1>
+            <h2 style="font-style: italic;margin-top: 20px;">at</h2>
+            <h1><%= item.eventPlace %></h1>
+            <hr style="border-bottom: 2px solid white;">
+            <h2 style="margin-top: 10px;">Events thats going to delight</h2>
+            <ul style="display: flex;flex-direction: row;justify-content: center;flex-wrap: wrap;">
+                <% item.eventComp.map(item=>{ %>
+                    <li style="padding: 10px;list-style: none;"><h2><%=item.name%></h2></li>
+           <% }) %>
+            </ul>
+            
+    </div> 
+    </div>
+   <% }) %>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="animation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Point-Table</title>
+    <link rel="stylesheet" href="styleresul.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div> 
+       
+        <nav>
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="./images/iete.jpg" width="80px" height="60px">
+                </a>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <ul class="navbar-items">
+                <li>
+                    <a href="/points-table">Points-Table</a>
+                </li>
+                <li>
+                    <a href="/classper">Class Performance</a>
+                </li>
+                <li>
+                    <a href="/event">Events</a>
+                </li>
+                <li>
+                    <a href="/results-user">Results</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="table-manage">
+    <% neededArray.forEach(item=>{ %>
+        <% if(item.releaseqotta==="YES" ){ %>
+            <div class="tt">
+                <table class="tablee">
+              <tr>
+        <th colspan="4"><%= eventName %></th>
+    </tr>
+            <tr>
+                <th colspan="4"><%= item.compName %></th>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <th>Section</th>
+                <th>Students Name</th>
+                <th>Topic</th>
+            </tr>
+            
+            <% item.compRes.map((items)=>{ %>
+            <% if(items.Year==="Second" ){ %>
+            <tr>
+                <td><%= items.Year %></td>
+                <td><%= items.Section %></td>
+                <td><%= items.StudentName %></td>
+                <td><%= items.Topic %></td>
+            
+            </tr>
+            <%} %>
+            <%}) %>
+            <% item.compRes.map((items,index)=>{ %>
+            <% if(items.Year==="Third" ){ %>
+            <tr>
+                <td><%= items.Year %></td>
+                <td><%= items.Section %></td>
+                <td><%= items.StudentName %></td>
+                <td><%= items.Topic %></td>
+            </tr>
+            <%} %>
+            <%}) %>
+            <% item.compRes.map((items,index)=>{ %>
+            <% if(items.Year==="Fourth" ){ %>
+            <tr>
+                <td><%= items.Year %></td>
+                <td><%= items.Section %></td>
+                <td><%= items.StudentName %></td>
+                <td><%= items.Topic %></td>
+            </tr>
+            <%} %>
+            <%}) %>
+        </table>
+            </div>
+        
+        <%} %>
+<% }) %>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+        <script src="animation.js"></script>
+</body>
+
+</html>

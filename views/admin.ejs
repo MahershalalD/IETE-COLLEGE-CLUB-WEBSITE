@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Admin</title>
+    <link rel="stylesheet" href="Adminstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f3542;">
+        <a class="navbar-brand" href="#">IETE ADMIN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/admin">Mark Allotment <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminAnn">Annocement Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin-event">Results Annoucement</a>
+                </li>
+                <form action="/signout">
+                <button class=" btn btn-danger">Sign-Out</button>
+            </form>
+            </ul>
+        </div>
+    </nav>  
+        <div class="jumbotron jumbotron-fluid" style="margin: 10px;background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;color: white;">
+            <div class="container-fluid">
+                <h1 class="display-4">Second Year</h1>
+            </div>
+        </div>
+            <% secondArray.forEach(function(found){ %>
+                <div class="container-flui">
+                <div class="main">
+                    <h2 style="padding: 10px; background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+                    border-top-left-radius:10px;border-top-right-radius: 10px;
+                    color: white;"><%=found.className %></h2>
+                    <div class="container-fluid">
+                        <!-- className:"ECE-D",
+                                    nopaperp: 0,
+                                    nopaperw:0,
+                                    noprojectd:0,
+                                    noprojectw:0,
+                                    notechp:0,
+                                    notechw:0,
+                                    noculp:0,
+                                    noculw:0,
+                                    extra:0,
+                                    currentposition:0,
+                                    previousposition:0 -->
+                                                            <!-- className:"ECE-D",
+                                                                                                                            className : String,
+                                                                nopaperp : Number,
+                                                                nopaperw : Number,
+                                                                noprojectd:Number,
+                                                                noprojectw : Number,
+                                                                nopaperpiit: Number,
+                                                                nopaperwiit: Number,
+                                                                noprojectdiit: Number,
+                                                                noprojectwiit: Number,
+                                                                notechp:Number,
+                                                                notechw : Number,
+                                                                noculp : Number,
+                                                                noculw :Number,
+                                                                nospop: Number,
+                                                                nospow: Number,
+                                                                extra:Number,
+                                                                Total: Number,
+                                                                currentposition:Number,
+                                                                previousposition:Number -->
+                        <div class="row" style="color: white;">
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>Position</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">0<%=found.currentposition %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4 >No. of Paper Presented</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.nopaperp %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.nopaperw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Presented in IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nopaperpiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Won IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nopaperwiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Presented</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.noprojectd %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.noprojectw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Presented in IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noprojectdiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Won in IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noprojectwiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Technical Event Participated</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.notechp %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Technical event Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.notechw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Cultural Event Participated</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.noculp %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Cultural Event Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.noculw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Sports Event Participated</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.nospop %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Sports Event Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.nospow %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>Extra Point</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.extra %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>Total</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;"><%=found.Total %></h4>
+                            </div>
+                        </div>
+                        <!-- className:"ECE-D",
+                                                                className : String,
+    nopaperp : Number,
+    nopaperw : Number,
+    noprojectd:Number,
+    noprojectw : Number,
+    nopaperpiit: Number,
+    nopaperwiit: Number,
+    noprojectdiit: Number,
+    noprojectwiit: Number,
+    notechp:Number,
+    notechw : Number,
+    noculp : Number,
+    noculw :Number,
+    nospop: Number,
+    nospow: Number,
+    extra:Number,
+    Total: Number,
+    currentposition:Number,
+    previousposition:Number -->
+                        <hr style="border: 0.5px solid white;">
+                        <div class="row" style="color: white;">
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperp" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control" name="change" placeholder="No. of Paper Presented" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperw" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control" name="change" placeholder="No. of Paper Won" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"  id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperpiit" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Paper Presented IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperwiit" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Paper Won IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectd" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Project Presented" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectw" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Project Won" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectdiit" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Project Presented In IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectwiit" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Project Won IN IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/notechp" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Technical Event Participated" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/notechw" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Technical event Won" aria-label="No. of Technical event Won"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noculp" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Cultural Event Participated" aria-label="No. of Cultural Event Participated"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noculw" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Cultural Event Won" aria-label="No. of Cultural Event Won"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nospop" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Sports Event Participated" aria-label="No. of Sports Event Participated"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nospow" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="No. of Sports Event Won" aria-label="No. of Sports Event Won"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/extra" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control"   name="change" placeholder="Extra Point" aria-label="Extra Point"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/Total" method="POST">
+                                <div class="input-group mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                    <input type="number" class="form-control" name="change" placeholder="Total" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark"   name="UniqueId" type="submit" value="<%= found._id %>" id="button-addon2">Update</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      <% }) %>
+            <div class="jumbotron jumbotron-fluid"
+                style="margin: 10px;background: #232526;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;color: white;">
+                <div class="container-fluid">
+                </div>
+        <h1 class="display-4">Third Year</h1>
+                </div>
+     </div>
+            <% thirdArray.forEach(function(found){ %>
+            <div class="container-flui">
+                <div class="main">
+                    <h2 style="padding: 10px; background: #232526;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+                   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            ;
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+                                border-top-left-radius:10px;border-top-right-radius: 10px;
+                                color: white;"><%=found.className %> </h2>
+                    <div class="container-fluid">
+                        <!-- className:"ECE-D",
+                                                nopaperp: 0,
+                                                nopaperw:0,
+                                                noprojectd:0,
+                                                noprojectw:0,
+                                                notechp:0,
+                                                notechw:0,
+                                                noculp:0,
+                                                noculw:0,
+                                                extra:0,
+                                                currentposition:0,
+                                                previousposition:0 -->
+                        <div class="row" style="color: white;">
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>Position</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    0<%=found.currentposition %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Presented</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nopaperp %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nopaperw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Presented in IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nopaperpiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Paper Won IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nopaperwiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Presented</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noprojectd %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noprojectw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Presented in IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noprojectdiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Project Won in IIT</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noprojectwiit %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Technical Event Participated</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.notechp %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Technical event Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.notechw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Cultural Event Participated</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noculp %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Cultural Event Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.noculw %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Sports Event Participated</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nospop %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>No. of Sports Event Won</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.nospow %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>Extra Point</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.extra %></h4>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <h4>Total</h4>
+                                <h4 style="border: 2px solid black ;border-radius: 5px; align-items: center;padding: 8px;margin: 10px;">
+                                    <%=found.Total %></h4>
+                            </div>
+                        </div>
+                        <hr style="border: 0.5px solid white;">
+                        <div class="row" style="color: white;">
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperpt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Paper Presented"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperwt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Paper Won"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperpiitt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Paper Presented IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nopaperwiitt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Paper Won IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectdt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Project Presented"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectwt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Project Won"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectdiitt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Project Presented In IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noprojectwiitt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Project Won IN IIT"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/notechpt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Technical Event Participated"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/notechwt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Technical event Won"
+                                            aria-label="No. of Technical event Won" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noculpt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Cultural Event Participated"
+                                            aria-label="No. of Cultural Event Participated" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/noculwt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Cultural Event Won"
+                                            aria-label="No. of Cultural Event Won" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nospopt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Sports Event Participated"
+                                            aria-label="No. of Sports Event Participated" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/nospowt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="No. of Sports Event Won"
+                                            aria-label="No. of Sports Event Won" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/extrat" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Extra Point" aria-label="Extra Point"
+                                            aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                            <div class="col-lg-2" style="display: flex;justify-content: space-around;align-items: center;">
+                                <form action="/Totalt" method="POST">
+                                    <div class="input-group mb-3"
+                                        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);">
+                                        <input type="number" class="form-control" name="change" placeholder="Total"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" name="UniqueId" type="submit" value="<%= found._id %>"
+                                                id="button-addon2">Update</button>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="animation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE-KEC | Point-Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+    <div>
+       <nav>
+        <div class="nav-logo">
+            <a href="/">
+               <img src="./images/iete.jpg" width="80px" height="60px"> 
+            </a>
+            
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <ul class="navbar-items">
+            <li>
+                <a href="/points-table">Points-Table</a>
+            </li>
+            <li>
+                <a href="/classper">Class Performance</a>
+            </li>
+            <li>
+                <a href="/event">Events</a>
+            </li>
+            <li>
+                <a href="/results-user">Results</a>
+            </li>
+        </ul>
+    </nav> 
+    </div>
+    
+    <div class="points-table" >
+            <div class="top" style="grid-row: 2/3;">
+            <h1 class="top-name">POINTS TABLE | BEST CLASS AWARD</h1>
+        </div>
+        
+        <table class="second-table">
+            <tr>
+                <th colspan="8" style="font-size: 35px;">Second Year Standings</th>
+            </tr>
+            <tr class="heading">
+                <th style="width: 6%;"></th>
+                <th style="width: 6%;"></th>
+                <th class="teams">Teams</th>
+                <th>Academic</th>
+                <th>Cultural</th>
+                <th>Sports</th>
+                <th>Extra</th>
+                <th>Total</th>
+            </tr>
+            <!-- className:"ECE-D",
+            nopaperp: 0,
+            nopaperw:0,
+            noprojectd:0,
+            noprojectw:0,
+            notechp:0,
+            notechw:0,
+            noculp:0,
+            noculw:0,
+            extra:0,
+            currentposition:0,
+            previousposition:0 -->
+
+
+            <% secondArray.forEach(function(found){ %>
+                <%if(found.currentposition===1){%>
+                <tr>
+                    <td><%=found.currentposition %></td>
+                    <% if(found.previousposition >found.currentposition ){ %>
+                        <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                <% } %>
+                <% if(found.previousposition===found.currentposition){ %>
+                <td style="font-size: 20px;">
+                    <h2>-</h2>
+                </td>
+                <% } %>
+                <% if(found.currentposition> found.previousposition){ %>
+                    <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                   <% } %>
+                    <td><%=found.className %></i></td>
+                    <td><%=found.nopaperp %></td>
+                    <td><%=found.noprojectw %></td>
+                    <td><%=found.noculp %></td>
+                    <td><%=found.extra %></td>
+                    <td><%=found.classsName %></td>
+                </tr>
+                <%} %>
+           <% })%>
+            <% secondArray.forEach(function(found){ %>
+            <%if(found.currentposition===2){%>
+            <tr>
+                <td><%=found.currentposition %></td>
+                <% if(found.previousposition > found.currentposition){ %>
+                <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                <% } %>
+                <% if(found.previousposition===found.currentposition){ %>
+                <td style="font-size: 20px;">
+                    <h2>-</h2>
+                </td>
+                 <% } %>
+                <% if(found.currentposition> found.previousposition){ %>
+                    <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                   <% } %>
+                <td><%=found.className %></i></td>
+                <td><%=found.nopaperp %></td>
+                <td><%=found.noprojectw %></td>
+                <td><%=found.noculp %></td>
+                <td><%=found.extra %></td>
+                <td><%=found.classsName %></td>
+            </tr>
+            <%} %>
+            <% })%>
+            <% secondArray.forEach(function(found){ %>
+            <%if(found.currentposition===3){%>
+            <tr>
+                <td><%=found.currentposition %></td>
+                <% if(found.previousposition > found.currentposition){ %>
+                <td><i class="fa fa-2x fa-caret-up" style="color: #009432;"></i></td>
+                <% } %>
+                <% if(found.previousposition===found.currentposition){ %>
+                    <td style="font-size: 20px;"><h2>-</h2></td>
+                 <% } %>
+                <% if(found.currentposition> found.previousposition){ %>
+                    <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                   <% } %>
+                <td><%=found.className %></i></td>
+                <td><%=found.nopaperp %></td>
+                <td><%=found.noprojectw %></td>
+                <td><%=found.noculp %></td>
+                <td><%=found.extra %></td>
+                <td><%=found.classsName %></td>
+            </tr>
+            <%} %>
+            <% })%>
+            <% secondArray.forEach(function(found){ %>
+            <%if(found.currentposition===4){%>
+            <tr>
+                <td><%=found.currentposition %></td>
+                <% if(found.previousposition >found.currentposition){ %>
+                <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                <% } %>
+                <% if(found.previousposition===found.currentposition){ %>
+                <td style="font-size: 20px;">
+                    <h2>-</h2>
+                </td>
+                 <% } %>
+                <% if(found.currentposition> found.previousposition){ %>
+                    <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                   <% } %>
+                <td><%=found.className %></i></td>
+                <td><%=found.nopaperp %></td>
+                <td><%=found.noprojectw %></td>
+                <td><%=found.noculp %></td>
+                <td><%=found.extra %></td>
+                <td><%=found.classsName %></td>
+            </tr>
+            <%} %>
+            <% })%>
+            </table>
+            <table class="third-table">
+                <tr>
+                    <th colspan="8" style="font-size: 35px;">Third Year Standings</th>
+                </tr>
+                <tr class="heading">
+                    <th style="width: 6%;"></th>
+                    <th style="width: 6%;"></th>
+                    <th class="teams">Teams</th>
+                    <th>Academic</th>
+                    <th>Cultural</th>
+                    <th>Sports</th>
+                    <th>Extra</th>
+                    <th>Total</th>
+                </tr>
+                <!-- className:"ECE-D",
+                        nopaperp: 0,
+                        nopaperw:0,
+                        noprojectd:0,
+                        noprojectw:0,
+                        notechp:0,
+                        notechw:0,
+                        noculp:0,
+                        noculw:0,
+                        extra:0,
+                        currentposition:0,
+                        previousposition:0 -->
+                <% thirdArray.forEach(function(found){ %>
+                <%if(found.currentposition===1){%>
+                <tr>
+                    <td><%=found.currentposition %></td>
+                    <% if(found.previousposition >found.currentposition ){ %>
+                    <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                    <% } %>
+                    <% if(found.previousposition===found.currentposition){ %>
+                    <td style="font-size: 20px;">
+                        <h2>-</h2>
+                    </td>
+                    <% } %>
+                    <% if(found.currentposition> found.previousposition){ %>
+                    <td>
+                        <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                    <% } %>
+                    <td><%=found.className %></i></td>
+                    <td><%=found.nopaperp %></td>
+                    <td><%=found.noprojectw %></td>
+                    <td><%=found.noculp %></td>
+                    <td><%=found.extra %></td>
+                    <td><%=found.classsName %></td>
+                </tr>
+                <%} %>
+                <% })%>
+                <% thirdArray.forEach(function(found){ %>
+                <%if(found.currentposition===2){%>
+                <tr>
+                    <td><%=found.currentposition %></td>
+                    <% if(found.previousposition >found.currentposition){ %>
+                    <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                    <% } %>
+                    <% if(found.previousposition===found.currentposition){ %>
+                    <td style="font-size: 20px;">
+                        <h2>-</h2>
+                    </td>
+                    <% } %>
+                    <% if(found.currentposition> found.previousposition){ %>
+                    <td>
+                        <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                    <% } %>
+                    <td><%=found.className %></i></td>
+                    <td><%=found.nopaperp %></td>
+                    <td><%=found.noprojectw %></td>
+                    <td><%=found.noculp %></td>
+                    <td><%=found.extra %></td>
+                    <td><%=found.classsName %></td>
+                </tr>
+                <%} %>
+                <% })%>
+                <% thirdArray.forEach(function(found){ %>
+                <%if(found.currentposition===3){%>
+                <tr>
+                    <td><%=found.currentposition %></td>
+                    <% if(found.previousposition > found.currentposition){ %>
+                    <td><i class="fa fa-2x fa-caret-up" style="color: #009432;"></i></td>
+                    <% } %>
+                    <% if(found.previousposition===found.currentposition){ %>
+                    <td style="font-size: 20px;">
+                        <h2>-</h2>
+                    </td>
+                    <% } %>
+                    <% if(found.currentposition> found.previousposition){ %>
+                    <td>
+                        <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                    <% } %>
+                    <td><%=found.className %></i></td>
+                    <td><%=found.nopaperp %></td>
+                    <td><%=found.noprojectw %></td>
+                    <td><%=found.noculp %></td>
+                    <td><%=found.extra %></td>
+                    <td><%=found.classsName %></td>
+                </tr>
+                <%} %>
+                <% })%>
+                <% thirdArray.forEach(function(found){ %>
+                <%if(found.currentposition===4){%>
+                <tr>
+                    <td><%=found.currentposition %></td>
+                    <% if(found.previousposition >found.currentposition){ %>
+                    <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                    <% } %>
+                    <% if(found.previousposition===found.currentposition){ %>
+                    <td style="font-size: 20px;">
+                        <h2>-</h2>
+                    </td>
+                    <% } %>
+                    <% if(found.currentposition> found.previousposition){ %>
+                    <td>
+                        <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
+                    <% } %>
+                    <td><%=found.className %></i></td>
+                    <td><%=found.nopaperp %></td>
+                    <td><%=found.noprojectw %></td>
+                    <td><%=found.noculp %></td>
+                    <td><%=found.extra %></td>
+                    <td><%=found.classsName %></td>
+                </tr>
+                <%} %>
+                <% })%>
+            </table>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+            <script src="animation.js"></script>
+</body>
+</html>

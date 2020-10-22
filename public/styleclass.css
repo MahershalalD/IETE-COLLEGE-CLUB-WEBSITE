@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 100px;
+}
+.event{
+    grid-row: 2/3;
+}
+.event{
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background: #f85032;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+.select{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin:10px 5px;
+}
+.option{
+    padding: 10px;
+    height: 30px; 
+    font-size: 20px;
+    margin: 10px;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #2C3A47;
+    color: white;
+    cursor: pointer;
+}
+@media only screen and (max-width:700px){ 
+    .event{
+        height: 230px;
+    }
+    .secondpart{
+    display: flex;
+    flex-direction: column !important;
+    }
+    .evnet-name{
+        margin:15px auto  !important ;
+    }
+}
+
+.evnet-name{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 15px;
+    justify-content: space-around;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    color: white;
+    background-color: #2C3A47;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+.main{
+    height: 100%;
+    border-radius: 10px;
+    background: #f85032;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+.class-name{
+    width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border:10px solid #2C3A47;
+  border-radius:600px;
+  background-color: thistle;
+  margin: 50px auto;
+  line-height: 250px;
+  text-align: center;
+    color: black;
+    border-style:  dashed;
+  animation: spin 10s infinite linear;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+@keyframes spin {
+  100% { transform: rotate(1turn); }
+}
+.mains{
+    display: grid;
+    grid-template-rows: 200px 100px;
+}
+.secondpart{
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
