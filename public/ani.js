@@ -19,7 +19,7 @@ $("#cmd").on("click", function () {
             var docDefinition = {
                 content: [{
                     image: data,
-                    width: 500,
+                    width: 450,
                     height:220,
                 }],
             };
