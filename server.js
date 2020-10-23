@@ -842,14 +842,9 @@ app.post("/result-publish",(req,res)=>{
     
 })
 app.get("/results",(req,res)=>{
-    if(req.isAuthenticated()){
       Result.find({},(err,fouund)=>{
         res.render("results",{neededArray : fouund})
     })  
-    }
-    else{
-        res.redirect("/log")
-    }
     
 })
 app.get("/results-user", (req, res) => {

@@ -10,10 +10,16 @@
 //     autoTable(doc, { html: '#my-table' })
 //     doc.save('table.pdf')
 // });
-const event = $('.eventN').text();
-const comp = $('.compN').text();
-$("#cmd").on("click", function () {
-    html2canvas($('.table')[0], {
+
+const event = document.querySelectorAll('.eventN');
+const comp = document.querySelectorAll('.compN');
+const btn = document.querySelectorAll('#cmd')
+const table = document.querySelectorAll('.table')
+console.log(table);
+btn.forEach((item,index)=>{
+    console.log(item);
+    $(item).on("click", function () {
+        html2canvas($(table[index]), {
         onrendered: function (canvas) {
             var data = canvas.toDataURL();
             var docDefinition = {
@@ -23,7 +29,9 @@ $("#cmd").on("click", function () {
                     height:220,
                 }],
             };
-            pdfMake.createPdf(docDefinition).download(event+"_"+comp+".pdf");
+                pdfMake.createPdf(docDefinition).download(event[index].textContent+"_"+comp[index].textContent+".pdf");
         }
     });
 });
+})
+
