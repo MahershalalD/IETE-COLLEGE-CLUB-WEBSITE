@@ -165,7 +165,6 @@ app.get("/signout",(req,res)=>{
     res.redirect("/");
 })
 app.post("/register",(req,res)=>{
-    console.log(req.body);
     User.register({ username: req.body.username }, req.body.password,(err,user)=>{
         if(err){
             console.log(err);
@@ -250,7 +249,7 @@ app.get('/admin',(req,res)=>{
     })
     }
     else{
-        res.redirect('/sign');
+        res.redirect('/log');
     }
     
 })
@@ -271,8 +270,6 @@ app.get('/event', (req, res) => {
 app.get("/classper",(req,res)=>{
     if (temp_year ==="Second Year"){
       Secondyear.find({ className:"ECE-"+temp_section},(err,found)=>{
-          console.log("used");
-          console.log(found);
           res.render("classperformance", { requiredArray: found, year:"II"}) 
     })  
     }
@@ -356,7 +353,6 @@ app.post("/event-manager",(req,res)=>{
 
 app.post("/nopaperp",(req,res)=>{
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperp : req.body.change
     }
@@ -371,7 +367,6 @@ app.post("/nopaperp",(req,res)=>{
 })
 app.post("/nopaperw", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperw: req.body.change
     }
@@ -386,7 +381,6 @@ app.post("/nopaperw", (req, res) => {
 })
 app.post("/noprojectd", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectd: req.body.change
     }
@@ -401,7 +395,6 @@ app.post("/noprojectd", (req, res) => {
 })
 app.post("/noprojectw", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectw: req.body.change
     }
@@ -416,7 +409,6 @@ app.post("/noprojectw", (req, res) => {
 })
 app.post("/nopaperpiit", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperpiit: req.body.change
     }
@@ -431,7 +423,6 @@ app.post("/nopaperpiit", (req, res) => {
 })
 app.post("/nopaperwiit", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperwiit: req.body.change
     }
@@ -446,7 +437,6 @@ app.post("/nopaperwiit", (req, res) => {
 })
 app.post("/noprojectdiit", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectdiit: req.body.change
     }
@@ -461,7 +451,6 @@ app.post("/noprojectdiit", (req, res) => {
 })
 app.post("/noprojectwiit", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectwiit: req.body.change
     }
@@ -476,7 +465,6 @@ app.post("/noprojectwiit", (req, res) => {
 })
 app.post("/notechp", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         notechp: req.body.change
     }
@@ -491,7 +479,6 @@ app.post("/notechp", (req, res) => {
 })
 app.post("/notechw", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         notechw: req.body.change
     }
@@ -506,7 +493,6 @@ app.post("/notechw", (req, res) => {
 })
 app.post("/noculp", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noculp: req.body.change
     }
@@ -521,7 +507,6 @@ app.post("/noculp", (req, res) => {
 })
 app.post("/noculw", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noculw: req.body.change
     }
@@ -536,7 +521,6 @@ app.post("/noculw", (req, res) => {
 })
 app.post("/nospop", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nospop: req.body.change
     }
@@ -551,7 +535,6 @@ app.post("/nospop", (req, res) => {
 })
 app.post("/nospow", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nospow: req.body.change
     }
@@ -566,7 +549,6 @@ app.post("/nospow", (req, res) => {
 })
 app.post("/extra", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         extra: req.body.change
     }
@@ -587,7 +569,6 @@ app.post("/extra", (req, res) => {
 
 app.post("/nopaperpt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperp: req.body.change
     }
@@ -602,7 +583,6 @@ app.post("/nopaperpt", (req, res) => {
 })
 app.post("/nopaperwt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperw: req.body.change
     }
@@ -617,7 +597,6 @@ app.post("/nopaperwt", (req, res) => {
 })
 app.post("/noprojectdt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectd: req.body.change
     }
@@ -632,7 +611,6 @@ app.post("/noprojectdt", (req, res) => {
 })
 app.post("/noprojectwt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectw: req.body.change
     }
@@ -647,7 +625,6 @@ app.post("/noprojectwt", (req, res) => {
 })
 app.post("/nopaperpiitt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperpiit: req.body.change
     }
@@ -662,7 +639,6 @@ app.post("/nopaperpiitt", (req, res) => {
 })
 app.post("/nopaperwiitt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nopaperwiit: req.body.change
     }
@@ -677,7 +653,6 @@ app.post("/nopaperwiitt", (req, res) => {
 })
 app.post("/noprojectdiitt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectdiit: req.body.change
     }
@@ -692,7 +667,6 @@ app.post("/noprojectdiitt", (req, res) => {
 })
 app.post("/noprojectwiitt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noprojectwiit: req.body.change
     }
@@ -707,7 +681,6 @@ app.post("/noprojectwiitt", (req, res) => {
 })
 app.post("/notechpt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         notechp: req.body.change
     }
@@ -722,7 +695,6 @@ app.post("/notechpt", (req, res) => {
 })
 app.post("/notechwt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         notechw: req.body.change
     }
@@ -737,7 +709,6 @@ app.post("/notechwt", (req, res) => {
 })
 app.post("/noculpt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noculp: req.body.change
     }
@@ -752,7 +723,6 @@ app.post("/noculpt", (req, res) => {
 })
 app.post("/noculwt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         noculw: req.body.change
     }
@@ -767,7 +737,6 @@ app.post("/noculwt", (req, res) => {
 })
 app.post("/nospopt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nospop: req.body.change
     }
@@ -782,7 +751,6 @@ app.post("/nospopt", (req, res) => {
 })
 app.post("/nospowt", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         nospow: req.body.change
     }
@@ -797,7 +765,6 @@ app.post("/nospowt", (req, res) => {
 })
 app.post("/extrat", (req, res) => {
     const id = req.body.UniqueId
-    console.log(req.body);
     const per = {
         extra: req.body.change
     }
@@ -812,7 +779,6 @@ app.post("/extrat", (req, res) => {
 })
 app.get("/admin-event", (req, res) => {
     Event.find({ }, (err, found) => {
-        console.log(found);
         if(found.length===0){
             res.sendFile(__dirname + "/public/noinfo.html")
         
@@ -843,7 +809,6 @@ app.post("/result-manager",(req,res)=>{
 //                     stopic: '',
 //                         UniqueId
 app.post("/result-m", (req, res) => {
-    console.log(req.body);
     const per = {
         Year : req.body.years,
         Section : req.body.yearse,
@@ -851,7 +816,6 @@ app.post("/result-m", (req, res) => {
         Topic : req.body.stopic
     }
     Result.findOne({ compName: req.body.compName }, function (err, foundList) {
-        console.log(foundList);
         foundList.compRes.push(per);
         foundList.save();
         res.redirect("/admin-event");
@@ -884,7 +848,6 @@ app.get("/results-user", (req, res) => {
 
 
 app.post('/del-comp',(req,res)=>{
-    console.log(req.body);
     Event.findOne({ _id: req.body.compi }, function (err, foundList) {
         foundList.eventComp = foundList.eventComp.filter(item => item.name !== req.body.UniqueId)
         foundList.save();
@@ -899,7 +862,6 @@ app.post('/del-comp',(req,res)=>{
     })
 })
 app.post("/delete-event",(req,res)=>{
-    console.log(req.body);
     const UniqueId = req.body.UniqueId;
     Event.deleteOne({ _id: UniqueId }, function (err) {
         if(err){

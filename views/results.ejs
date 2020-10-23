@@ -72,24 +72,30 @@
                                 <h1 style="background-color: #c23616;width: 30px !important;height: 30px;border-radius: 600px;align-items: center;">
                                 </h1>
                                 <p>NOT PUBLISHED</p>
-                           </div>
-                            <% } %>
+                           </div><% } %>
+                            <div class="col-lg-2">
+                                <button class="btn btn-lg btn-dark" id="cmd">Download as Pdf</button>
+                            </div>
+                            
                             
                             
                         </div>
                 </div>
-            </div>
-             <h2 style="text-align: center;"><%= item.compName %></h2>   
+            </div>  
             <div style="overflow-x:auto;">
             <table class="table table-bordered">
-                <thead>
+                    <tr>
+                        <th colspan="4" style="text-align: center;"><h2 class="eventN"><%= item.eventName %></h2></th>
+                    </tr>
+                    <tr>
+                        <th colspan="4" style="text-align: center;"><h2 class="compN"><%= item.compName %></h2></th>
+                    </tr>
                     <tr>
                         <th scope="col" style="text-align: center;">Year</th>
                         <th scope="col" style="text-align: center;">Section</th>
                         <th scope="col" style="text-align: center;">Students Name</th>
                         <th scope="col" style="text-align: center;">Topic</th>
                     </tr>
-                </thead>
                 <tbody>
                     <% item.compRes.map((items)=>{ %>
                     <% if(items.Year==="Second" ){ %>
@@ -127,16 +133,20 @@
             <% }) %>
             
             </div>
-        
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script src="ani.js"></script>
 </body>
 
 </html>
