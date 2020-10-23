@@ -151,6 +151,7 @@ app.post("/login",(req,res)=>{
     req.login(user, function(err){
         if(err){
             console.log(err);
+            res.redirect("/log")
         }
         else{
             passport.authenticate("local")(req, res, () => {
@@ -254,9 +255,15 @@ app.get('/admin',(req,res)=>{
     
 })
 app.get('/adminAnn', (req, res) => {
-    Event.find({}, (err, found) => {
+    if(req.isAuthenticated()){
+          Event.find({}, (err, found) => {
         res.render("adminAnn", {eventArray:found});
-})
+}) 
+    }
+    else{
+        res.redirect("/log");
+    }
+ 
 })
 
 app.get('/event', (req, res) => {
@@ -778,7 +785,8 @@ app.post("/extrat", (req, res) => {
     })
 })
 app.get("/admin-event", (req, res) => {
-    Event.find({ }, (err, found) => {
+    if(req.isAuthenticated()){
+       Event.find({ }, (err, found) => {
         if(found.length===0){
             res.sendFile(__dirname + "/public/noinfo.html")
         
@@ -794,8 +802,11 @@ app.get("/admin-event", (req, res) => {
                 })
             })
         }
-        })
-    
+        }) 
+    }
+    else{
+        res.redirect("/log");
+    } 
 })
 app.post("/result-manager",(req,res)=>{
     temp_result = req.body.eventType ;
@@ -831,9 +842,15 @@ app.post("/result-publish",(req,res)=>{
     
 })
 app.get("/results",(req,res)=>{
-    Result.find({},(err,fouund)=>{
+    if(req.isAuthenticated()){
+      Result.find({},(err,fouund)=>{
         res.render("results",{neededArray : fouund})
-    })
+    })  
+    }
+    else{
+        res.redirect("/log")
+    }
+    
 })
 app.get("/results-user", (req, res) => {
     var cd="";
