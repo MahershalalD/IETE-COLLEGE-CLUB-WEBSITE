@@ -19,8 +19,8 @@ $("#cmd").on("click", function () {
             var docDefinition = {
                 content: [{
                     image: data,
-                    width: 510,
-                    height:120,
+                    width: 500,
+                    height:220,
                 }],
             };
             pdfMake.createPdf(docDefinition).download(event+"_"+comp+".pdf");
