@@ -85,7 +85,12 @@ const resultSchema = {
     compId:String,
     compRes: Array
 }
-
+const noticeSchema = {
+    type: String,
+    date: String,
+    time: String,
+    content: String
+}
 const userSchema = new mongoose.Schema({
     email : String,
     password: String
@@ -98,6 +103,7 @@ const Secondyear = mongoose.model('Secondyear',SecondclassSchema);
 const Thirdyear = mongoose.model('Thirdyear',ThirdclassSchema);
 const Event = mongoose.model('Event', eventSchema);
 const Result = mongoose.model('Result',resultSchema);
+const Notice = mongoose.model('Notice', noticeSchema);
 userSchema.plugin(passportLocalMongoose);
 
 const User = new mongoose.model("User",userSchema);
@@ -130,7 +136,10 @@ const thirdyear = new Thirdyear({
 })
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname  + "index.html")
+    Notice.find({},(err,found)=>{
+       res.render("index1",{foundArray:found}) 
+    })
+    
 })
 app.get("/sign", (req, res) => {
     res.sendFile(__dirname + "/public/signin.html")
@@ -140,6 +149,34 @@ app.get("/log", (req, res) => {
 })
 app.get("/logt", (req, res) => {
     res.sendFile(__dirname + "adminverification.html")
+})
+
+app.get("/notice", (req, res) => {
+    if(req.isAuthenticated()){
+        Notice.find({},(err,found)=>{
+      res.render("notice",{eventArray:found});
+})    
+    }
+    else{
+        res.redirect("/log")
+    }
+  
+})
+    
+app.post("/notice", (req, res) => {
+    const time = req.body.time;
+    time == time.split(":");
+    const temp_1 = time[0]+time[1];
+    const temp_2 = time[3] + time[4];
+    let meridiemTime = temp_1 >= 12 && (temp_1 - 12 || 12) + ':' + temp_2 + ' PM' || (Number(temp_1) || 12) + ':' + temp_2 + ' AM';
+    const notice = new Notice({
+          type: req.body.type,
+    date: req.body.date,
+    time: meridiemTime,
+    content: req.body.content
+    })
+    notice.save();
+    res.redirect("/notice")
 })
 
 app.post("/login",(req,res)=>{
@@ -853,6 +890,7 @@ app.get("/results",(req,res)=>{
     
 })
 app.get("/results-user", (req, res) => {
+    
     var cd="";
     Result.find({}, (err, fouund) => {
         fouund.forEach(found=>{
@@ -899,6 +937,18 @@ app.post("/delete-event",(req,res)=>{
     
     
 
+})
+app.post("/delete-notice", (req, res) => {
+    console.log(req.body);
+    const UniqueId = req.body.UniqueId;
+    Notice.deleteOne({ _id: UniqueId }, function (err) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+                    res.redirect("/notice");
+                }
+    })
 })
 
 let port = process.env.PORT;

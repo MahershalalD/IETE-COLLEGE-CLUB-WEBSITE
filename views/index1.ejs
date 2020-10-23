@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylenotice.css">
     <title>IETE KEC</title>
 </head>
 <body>
@@ -39,16 +40,31 @@
     </nav>
     <div class="grid-manage">
      <div class="headimg">
-        <h1 style="text-align: center;font-size: 60px;margin-top: 100px;font-family: 'Tajawal', sans-serif;">KONGU ENGINEERING COLLEGE</h1>
-        <h2 style="text-align: center; font-size: 30px;margin-top: 10px;font-family: 'Tajawal', sans-serif;">DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING</h2>
-        <h2 style="text-align: center; color: white; font-size: 60px;margin-top: 20px;font-family: 'Tajawal', sans-serif;">
+        <h3 class="headd" style="text-align: center;font-size: 60px;margin-top: 100px;font-family: 'Tajawal', sans-serif;">KONGU ENGINEERING COLLEGE</h3>
+        <h2  class="headdd" style="text-align: center; font-size: 30px;margin-top: 10px;font-family: 'Tajawal', sans-serif;">DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING</h2>
+        <h2 class="head" style="text-align: center; color: white; font-size: 60px;margin-top: 20px;font-family: 'Tajawal', sans-serif;">
             Welcome's You</h2>
     </div>
-
+    <div class="notice">
+        <div >
+            <table class="notice-manage">
+                <tr>
+                    <th colspan="2" style="text-align: center;margin-bottom: 5px;">Notice Board</th>
+                </tr>
+                <% foundArray.forEach((item)=>{ %>
+                    <tr>
+                         <th class="notice-date"><h3 style="font-size: 30px;"><%=item.date[8]+item.date[9]%></h3><hr style="border-bottom: 1px solid white;"><%=item.time%></th>
+                        <th><%=item.content%></th>
+                    </tr>
+                <% }) %>
+                
+            </table>
+        </div>
+    </div>
 </div>
 
 <div class="footer" style="background: black;">
-    <h3 style="text-align: center;color: white;padding: 20px;font-family: 'Quicksand', sans-serif;">Created and Mainted by <a href="/log">IETE</a> | ECA</h3>
+    <h3 style="text-align: center;color: white;padding: 20px;font-family: 'Quicksand', sans-serif;">Created and Mainted by <a href="/admin">IETE</a> | ECA</h3>
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>

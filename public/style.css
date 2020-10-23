@@ -43,8 +43,7 @@ display: none;
     padding: 10px;
     font-family: 'Quicksand', sans-serif;
 }
-.headimg{
-    grid-row: 2/3;
+body{
     background-image: url("./images/conven1.png");
     width: 100%;
     height: 100%;
@@ -52,7 +51,7 @@ display: none;
 .grid-manage{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 857px;
+    grid-template-rows: 80px 600px 200px;
 }
 .navbar-items a:hover{
     color: #f85032;
@@ -122,7 +121,7 @@ display: none;
     .nav-active{
         display: flex;
     }
-    .headimg{
+    body{
     background: #f85032;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -276,7 +275,7 @@ td{
 }
 .heading{
     background-color: #182C61;
-    font-size: 10px;
+    font-size: 5px !important;
     padding: 5px;
 }
 th{
@@ -287,8 +286,5 @@ td{
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     color: white;
-}
-.teams{
-    width: 20%;
 }
 }

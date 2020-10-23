@@ -1,5 +1,219 @@
+*{
+    margin: 0;
+    padding: 0
+}
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+nav{
+    background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar-items{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 40%;
+}
+.navbar-items li{
+    list-style: none;
+}
+.navbar-items a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px; 
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+.headimg{
+    grid-row: 2/3;
+    background-image: url("./images/conven1.png");
+    width: 100%;
+    height: 100%;
+}
+.grid-manage{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 857px;
+}
+.navbar-items a:hover{
+    color: #f85032;
+}
+.burger{
+    position: relative;
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    left: 30px;
+    /* border: 3px solid #7054CB;
+    border-radius: 10px; */
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#2C3A47;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 0%;                       /******** <- Remove this line *********/
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 6px;
+    align-items: center;
+    background-color:white;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px,7px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-6px,-9px);
+}
+@media screen and (max-width:600px){
+    nav{
+        width: 100%;
+        flex-direction: column;
+        transition: all 2s;
+    }
+    .nav-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+    .navbar-items{
+        width: 70% !important;
+        border-radius: 20px;
+        display: none;
+        flex-direction: column;
+        z-index: 2;
+        transition: all 2s;
+    }
+    .navbar-items li{
+        opacity: 0;
+        font-size: 15px;
+        padding-top: 10px;
+        padding-bottom:10px;
+        transition: opacity 0.5s ease in;
+    }
+    .burger{
+        display: block;
+    }
+    .nav-active{
+        display: flex;
+    }
+    .headimg{
+    background: #f85032;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+    .headimg{
+        background-color: tomato;
+        width: 100%;
+        height: 100%;
+    }
+    .head-text{
+    grid-column: 1;
+    grid-row: 2/3;
+    font-family: 'Quicksand', sans-serif;
+    align-items: end;
+    margin: 80px;
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px) ;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) ;
+    }
+}
+.tablee{
+    width: 100%;
+}
+}
+
+
+.table-manage{
+    position: relative;
+   top: 100px;
+   
+}
+.tt{
+    overflow-x: auto;
+}
+table.tablee{
+     border:0.5px solid rgba(14, 13, 13, 0.2) !important;
+}
+.tablee{
+    color: black;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+table, th, td {
+  border:0.5px solid rgba(14, 13, 13, 0.2) !important;
+  text-align: center;
+}
+th{
+    font-size: 20px;
+}
+th, td{
+    padding: 15px;
+    background-clip: padding-box
+
+}
 .dashboard{
     display: grid;
     grid-template-columns: 1fr;

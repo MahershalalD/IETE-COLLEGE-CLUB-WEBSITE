@@ -1,0 +1,37 @@
+.teams{
+    width: 20%;
+}
+table{
+    margin:400px auto;
+    margin-bottom: 0;
+}
+
+.notice-manage{
+    border: 1px solid white;
+    padding: 20px;
+}
+.notice-date{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: tomato;
+    padding: 10px;
+    margin-right: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width:700px){
+
+table{
+    margin-top: 350px !important;
+}
+.headd{
+    font-size: 30px !important;
+}
+.head{
+    font-size: 40px !important;
+}
+.headdd{
+    font-size: 20px !important;
+}
+}

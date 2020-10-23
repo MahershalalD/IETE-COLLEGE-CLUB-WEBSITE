@@ -79,7 +79,7 @@
                 <tr>
                     <td><%=found.currentposition %></td>
                     <% if(found.previousposition >found.currentposition ){ %>
-                        <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                        <td class="count"><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
                 <% } %>
                 <% if(found.previousposition===found.currentposition){ %>
                 <td style="font-size: 20px;">
@@ -90,11 +90,11 @@
                     <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                    <% } %>
                     <td><%=found.className %></i></td>
-                    <td><%=found.nopaperp %></td>
-                    <td><%=found.noprojectw %></td>
-                    <td><%=found.noculp %></td>
-                    <td><%=found.extra %></td>
-                    <td><%=found.classsName %></td>
+                    <td class="count"><%=found.nopaperp %></td>
+                    <td class="count"><%=found.noprojectw %></td>
+                    <td class="count"><%=found.noculp %></td>
+                    <td class="count"><%=found.extra %></td>
+                    <td class="count"><%=found.classsName %></td>
                 </tr>
                 <%} %>
            <% })%>
@@ -103,7 +103,7 @@
             <tr>
                 <td><%=found.currentposition %></td>
                 <% if(found.previousposition > found.currentposition){ %>
-                <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                <td class="count"><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
                 <% } %>
                 <% if(found.previousposition===found.currentposition){ %>
                 <td style="font-size: 20px;">
@@ -114,11 +114,11 @@
                     <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                    <% } %>
                 <td><%=found.className %></i></td>
-                <td><%=found.nopaperp %></td>
-                <td><%=found.noprojectw %></td>
-                <td><%=found.noculp %></td>
-                <td><%=found.extra %></td>
-                <td><%=found.classsName %></td>
+                <td class="count"><%=found.nopaperp %></td>
+                <td class="count"><%=found.noprojectw %></td>
+                <td class="count"><%=found.noculp %></td>
+                <td class="count"><%=found.extra %></td>
+                <td class="count"><%=found.classsName %></td>
             </tr>
             <%} %>
             <% })%>
@@ -136,11 +136,11 @@
                     <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                    <% } %>
                 <td><%=found.className %></i></td>
-                <td><%=found.nopaperp %></td>
-                <td><%=found.noprojectw %></td>
-                <td><%=found.noculp %></td>
-                <td><%=found.extra %></td>
-                <td><%=found.classsName %></td>
+                <td class="count"><%=found.nopaperp %></td>
+                <td class="count"><%=found.noprojectw %></td>
+                <td class="count"><%=found.noculp %></td>
+                <td class="count"><%=found.extra %></td>
+                <td class="count"><%=found.classsName %></td>
             </tr>
             <%} %>
             <% })%>
@@ -149,7 +149,7 @@
             <tr>
                 <td><%=found.currentposition %></td>
                 <% if(found.previousposition >found.currentposition){ %>
-                <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                <td class="count"><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
                 <% } %>
                 <% if(found.previousposition===found.currentposition){ %>
                 <td style="font-size: 20px;">
@@ -160,11 +160,11 @@
                     <td><i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                    <% } %>
                 <td><%=found.className %></i></td>
-                <td><%=found.nopaperp %></td>
-                <td><%=found.noprojectw %></td>
-                <td><%=found.noculp %></td>
-                <td><%=found.extra %></td>
-                <td><%=found.classsName %></td>
+                <td class="count"><%=found.nopaperp %></td>
+                <td class="count"><%=found.noprojectw %></td>
+                <td class="count"><%=found.noculp %></td>
+                <td class="count"><%=found.extra %></td>
+                <td class="count"><%=found.classsName %></td>
             </tr>
             <%} %>
             <% })%>
@@ -200,7 +200,7 @@
                 <tr>
                     <td><%=found.currentposition %></td>
                     <% if(found.previousposition >found.currentposition ){ %>
-                    <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                    <td class="count"><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
                     <% } %>
                     <% if(found.previousposition===found.currentposition){ %>
                     <td style="font-size: 20px;">
@@ -208,15 +208,15 @@
                     </td>
                     <% } %>
                     <% if(found.currentposition> found.previousposition){ %>
-                    <td>
+                    <td class="count">
                         <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                     <% } %>
                     <td><%=found.className %></i></td>
-                    <td><%=found.nopaperp %></td>
-                    <td><%=found.noprojectw %></td>
-                    <td><%=found.noculp %></td>
-                    <td><%=found.extra %></td>
-                    <td><%=found.classsName %></td>
+                    <td class="count"><%=found.nopaperp %></td>
+                    <td class="count"><%=found.noprojectw %></td>
+                    <td class="count"><%=found.noculp %></td>
+                    <td class="count"><%=found.extra %></td>
+                    <td class="count"><%=found.classsName %></td>
                 </tr>
                 <%} %>
                 <% })%>
@@ -225,7 +225,7 @@
                 <tr>
                     <td><%=found.currentposition %></td>
                     <% if(found.previousposition >found.currentposition){ %>
-                    <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                    <td class="count"><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
                     <% } %>
                     <% if(found.previousposition===found.currentposition){ %>
                     <td style="font-size: 20px;">
@@ -233,15 +233,15 @@
                     </td>
                     <% } %>
                     <% if(found.currentposition> found.previousposition){ %>
-                    <td>
+                    <td class="count">
                         <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                     <% } %>
                     <td><%=found.className %></i></td>
-                    <td><%=found.nopaperp %></td>
-                    <td><%=found.noprojectw %></td>
-                    <td><%=found.noculp %></td>
-                    <td><%=found.extra %></td>
-                    <td><%=found.classsName %></td>
+                    <td class="count"><%=found.nopaperp %></td>
+                    <td class="count"><%=found.noprojectw %></td>
+                    <td class="count"><%=found.noculp %></td>
+                    <td class="count"><%=found.extra %></td>
+                    <td class="count"><%=found.classsName %></td>
                 </tr>
                 <%} %>
                 <% })%>
@@ -258,15 +258,15 @@
                     </td>
                     <% } %>
                     <% if(found.currentposition> found.previousposition){ %>
-                    <td>
+                    <td class="count">
                         <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                     <% } %>
                     <td><%=found.className %></i></td>
-                    <td><%=found.nopaperp %></td>
-                    <td><%=found.noprojectw %></td>
-                    <td><%=found.noculp %></td>
-                    <td><%=found.extra %></td>
-                    <td><%=found.classsName %></td>
+                    <td class="count"><%=found.nopaperp %></td>
+                    <td class="count"><%=found.noprojectw %></td>
+                    <td class="count"><%=found.noculp %></td>
+                    <td class="count"><%=found.extra %></td>
+                    <td class="count"><%=found.classsName %></td>
                 </tr>
                 <%} %>
                 <% })%>
@@ -275,7 +275,7 @@
                 <tr>
                     <td><%=found.currentposition %></td>
                     <% if(found.previousposition >found.currentposition){ %>
-                    <td><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
+                    <td class="count"><i class="fa fa-1x fa-caret-up" style="color: #009432; font-size: 20px;"></i></td>
                     <% } %>
                     <% if(found.previousposition===found.currentposition){ %>
                     <td style="font-size: 20px;">
@@ -283,15 +283,15 @@
                     </td>
                     <% } %>
                     <% if(found.currentposition> found.previousposition){ %>
-                    <td>
+                    <td class="count">
                         <i class="fa fa-1x fa-caret-down" style="color: black;"></i></td>
                     <% } %>
                     <td><%=found.className %></i></td>
-                    <td><%=found.nopaperp %></td>
-                    <td><%=found.noprojectw %></td>
-                    <td><%=found.noculp %></td>
-                    <td><%=found.extra %></td>
-                    <td><%=found.classsName %></td>
+                    <td class="count"><%=found.nopaperp %></td>
+                    <td class="count"><%=found.noprojectw %></td>
+                    <td class="count"><%=found.noculp %></td>
+                    <td class="count"><%=found.extra %></td>
+                    <td class="count"><%=found.classsName %></td>
                 </tr>
                 <%} %>
                 <% })%>
