@@ -7,8 +7,12 @@ table{
 }
 
 .notice-manage{
+    opacity: 0;
     border: 1px solid white;
     padding: 20px;
+}
+.notice-manage-i{
+    opacity: 1;
 }
 .notice-date{
     display: flex;

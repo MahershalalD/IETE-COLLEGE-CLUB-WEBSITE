@@ -13,6 +13,7 @@ bur.addEventListener('click', () => {
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
     $("nav").addClass("nav-after");
+    $(".notice-manage").addClass("notice-manage-i");
 });
 
 
