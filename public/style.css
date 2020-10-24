@@ -278,9 +278,13 @@ td{
     font-size: 5px !important;
     padding: 5px;
 }
+.teams{
+    width: 20%;
+}
 th{
     text-align: center;
     color: white;
+    font-size: 11px;
 }
 td{
     font-family: 'Quicksand', sans-serif;
