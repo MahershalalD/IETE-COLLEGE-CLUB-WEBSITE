@@ -311,15 +311,17 @@ td{
     position: relative;
   animation: MoveUpown 1s linear infinite;
   left: 0;
-  bottom: 0;
+  bottom: 10;
 }
 
 @keyframes MoveUpown {
   0%, 100% {
-    top: 20px;
+    top: 0px;
+    opacity: 0;
   }
   80% {
-    top: 0px;
+      opacity: 1;
+    top: 10px;
   }
 }
 
@@ -327,7 +329,7 @@ td{
     position: relative;
   animation: MoveUpDown 1s linear infinite;
   left: 0;
-  bottom: 0;
+  bottom: 5px;
 }
 
 @keyframes MoveUpDown {
