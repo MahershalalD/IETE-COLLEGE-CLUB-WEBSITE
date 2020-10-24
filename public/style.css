@@ -228,7 +228,7 @@ td{
 .loader-inner {
   vertical-align: top;
   display: inline-block;
-  width: max-content;
+  width: fit-content;
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
