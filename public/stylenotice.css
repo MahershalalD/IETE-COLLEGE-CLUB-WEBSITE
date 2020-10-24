@@ -20,7 +20,7 @@ table{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: tomato;
+    background-color: #d63031;
     padding: 10px;
     margin-right: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
@@ -50,7 +50,7 @@ table{
     border-radius: 2px;
     color: white;
     margin-top: 10px;
-    background-color: tomato;
+    background-color: #d63031;
     cursor: pointer;
 }
 .btn-res:hover{
