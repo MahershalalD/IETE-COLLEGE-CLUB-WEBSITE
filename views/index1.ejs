@@ -40,8 +40,8 @@
     </nav>
     <div class="grid-manage">
      <div class="headimg">
-        <h3 class="headd" style="text-align: center;font-size: 60px;margin-top: 100px;font-family: 'Tajawal', sans-serif;">KONGU ENGINEERING COLLEGE</h3>
-        <h2  class="headdd" style="text-align: center; font-size: 30px;margin-top: 10px;font-family: 'Tajawal', sans-serif;">DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING</h2>
+        <h3 class="headd" style="text-align: center;font-size: 60px;margin-top: 100px;font-family: 'Tajawal', sans-serif;color: white;">KONGU ENGINEERING COLLEGE</h3>
+        <h2  class="headdd" style="text-align: center; font-size: 30px;margin-top: 10px;font-family: 'Tajawal', sans-serif;color: white;">DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING</h2>
         <h2 class="head" style="text-align: center; color: white; font-size: 60px;margin-top: 20px;font-family: 'Tajawal', sans-serif;">
             Welcome's You</h2>
     </div>
@@ -54,10 +54,15 @@
                 <% foundArray.forEach((item)=>{ %>
                     <tr">
                          <th class="notice-date"><h3 style="font-size: 30px;"><%=item.date[8]+item.date[9]%></h3><hr style="border-bottom: 1px solid white;"><%=item.time%></th>
-                        <th  class="notice-dat"><h3 style="font-size: 20px;"><%=item.content%> 
+                        <th  class="notice-dat"><h3 style="font-size: 20px;"> 
+                            <h3 class="ml6">
+                                <span class="text-wrapper">
+                                    <span class="letters"><%=item.content%></span>
+                                </span>
+                            
                         <% if(item.type==="Result"){ %>
-                         | <button class="btn-res">Results</button>
-                       <% }%>
+                         | <a style="text-decoration: none;color: white;" href="/results-user"><button class="btn-res">Results</button></a>
+                       <% }%></h3>
                         </th>
                     </tr>
                 <% }) %>
@@ -72,6 +77,26 @@
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="animation.js"></script>
+    <script>
+        var textWrapper = document.querySelector('.ml6 .letters');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({ loop: true })
+                .add({
+                    targets: '.ml6 .letter',
+                    translateY: ["1.1em", 0],
+                    translateZ: 0,
+                    duration: 750,
+                    delay: (el, i) => 50 * i
+                }).add({
+                    targets: '.ml6',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+    </script>
 </body>
 </html>

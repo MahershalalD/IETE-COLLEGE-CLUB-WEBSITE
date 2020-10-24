@@ -46,4 +46,17 @@ table{
     color: white;
     margin-top: 10px;
     background-color: tomato;
+    cursor: pointer;
+}
+.btn-res:hover{
+    background-color: black;
+}
+.btn-res:focus{
+    border: none;
+    outline: none;
+}
+.notice-dat{
+    white-space: nowrap;
+    animation: rightThenLeft 4s linear;
+    -webkit-animation: rightThenLeft 4s linear;
 }
