@@ -54,7 +54,11 @@
                 <% foundArray.forEach((item)=>{ %>
                     <tr>
                          <th class="notice-date"><h3 style="font-size: 30px;"><%=item.date[8]+item.date[9]%></h3><hr style="border-bottom: 1px solid white;"><%=item.time%></th>
-                        <th><%=item.content%></th>
+                        <th><%=item.content%> 
+                        <% if(item.type==="Result"){ %>
+                            <button class="btn-res">Go to Results</button>
+                       <% }%>
+                        </th>
                     </tr>
                 <% }) %>
                 
