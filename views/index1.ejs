@@ -8,9 +8,10 @@
     <title>IETE KEC</title>
 </head>
 <body>
-   
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <nav>
-       
         <div class="nav-logo">
             <a href="/">
             <img src="./images/iete.jpg" width="80px" height="60px">
@@ -38,9 +39,6 @@
         </ul>
     </nav>
     <div class="grid-manage">
-         <div class="loader-wrapper">
-            <span class="loader"><span class="loader-inner"></span></span>
-        </div>
      <div class="headimg">
         <h3 class="headd" style="text-align: center;font-size: 60px;margin-top: 100px;font-family: 'Tajawal', sans-serif;color: white;">KONGU ENGINEERING COLLEGE</h3>
         <h2  class="headdd" style="text-align: center; font-size: 30px;margin-top: 10px;font-family: 'Tajawal', sans-serif;color: white;">DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING</h2>
@@ -51,38 +49,37 @@
         <div >
             <table class="notice-manage">
                 <tr>
-                    <th colspan="2" style="text-align: center;margin-bottom: 30px !important;">Notice Board</th>
+                    <th colspan="2" style="text-align: center;margin-bottom: 5px;">Notice Board</th>
                 </tr>
                 <% foundArray.forEach((item)=>{ %>
-                    <tr">
+                    <tr>
                          <th class="notice-date"><h3 style="font-size: 30px;"><%=item.date[8]+item.date[9]%></h3><hr style="border-bottom: 1px solid white;"><%=item.time%></th>
-                        <th  class="notice-dat"><h3 style="font-size: 20px;"> 
+                        <th>
                             <h3 class="ml6">
                                 <span class="text-wrapper">
-                                    <span class="letters"><%=item.content%></span>
+                                    <span class="letters"><%=item.content%>
+                                        </span>
                                 </span>
-                            
-                        <% if(item.type==="Result"){ %>
-                         | <a style="text-decoration: none;color: white;" href="/results-user"><button class="btn-res">Results</button></a>
-                       <% }%></h3>
-                        </th>
+                            <% if(item.type==="Result"){ %>
+                                        | <a style="text-decoration: none;color: white;" href="/results-user"><button class="btn-res">Results</button></a>
+                                        <% }%></h3></th>
                     </tr>
                 <% }) %>
                 
             </table>
         </div>
     </div>
-
+</div>
 
 <div class="footer" style="background: black;">
     <h3 style="text-align: center;color: white;padding: 20px;font-family: 'Quicksand', sans-serif;">Created and Mainted by <a href="/admin">IETE</a> | ECA</h3>
-</div></div>
+</div>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="animation.js"></script>
     <script>
-        var textWrapper = document.querySelector('.ml6 .letters');
+        // Wrap every letter in a span
+            var textWrapper = document.querySelector('.ml6 .letters');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
             anime.timeline({ loop: true })
@@ -100,5 +97,6 @@
                     delay: 1000
                 });
     </script>
+    <script src="animation.js"></script>
 </body>
 </html>

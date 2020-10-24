@@ -43,15 +43,15 @@ display: none;
     padding: 10px;
     font-family: 'Quicksand', sans-serif;
 }
-.headimg{
-    grid-row: 2/3;
+body{
     background-image: url("./images/conven1.png");
+    width: 100%;
     height: 100%;
 }
 .grid-manage{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 907px;
+    grid-template-rows: 80px 600px 200px;
 }
 .navbar-items a:hover{
     color: #f85032;
@@ -121,10 +121,15 @@ display: none;
     .nav-active{
         display: flex;
     }
-    .headimg{
-        background: #f85032;  /* fallback for old browsers */
+    body{
+    background: #f85032;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+    .headimg{
+        background-color: tomato;
+        width: 100%;
+        height: 100%;
     }
     .head-text{
     grid-column: 1;
@@ -201,8 +206,8 @@ td{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .loader-wrapper {
-    width:150%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -219,13 +224,12 @@ td{
   top: 0%;                       /******** <- Remove this line *********/
   border: 4px solid #Fff;
   animation: loader 2s infinite ease;
-  text-align: center;
 }
 
 .loader-inner {
   vertical-align: top;
   display: inline-block;
-  width: fit-content;
+  width: 100%;
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
@@ -269,9 +273,6 @@ td{
     font-size: 15px;
     height: 100%; 
 }
-.teams{
-    width: 20%;
-}
 .heading{
     background-color: #182C61;
     font-size: 5px !important;
@@ -280,7 +281,6 @@ td{
 th{
     text-align: center;
     color: white;
-    font-size: 11px;
 }
 td{
     font-family: 'Quicksand', sans-serif;
