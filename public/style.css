@@ -294,12 +294,14 @@ td{
 }
 .ml6 {
   position: relative;
+  align-items: center;
 }
 
 .ml6 .text-wrapper {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  align-items: center;
 }
 
 .ml6 .letter {

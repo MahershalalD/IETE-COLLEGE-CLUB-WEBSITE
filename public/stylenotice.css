@@ -4,12 +4,14 @@
 table{
     margin:400px auto 0;
     margin-bottom: 0;
+    align-items: center;
 }
 
 .notice-manage{
     opacity: 0;
     border: 1px solid white;
     padding: 20px;
+    align-items: center;
 }
 .notice-manage-i{
     opacity: 1;
@@ -25,7 +27,6 @@ table{
 }
 .notice-dat{
     align-items: center;
-    height: 10%;
 }
 @media only screen and (max-width:700px){
 
