@@ -2,7 +2,7 @@
     width: 20%;
 }
 table{
-    margin:400px auto;
+    margin:600px auto 0;
     margin-bottom: 0;
 }
 
@@ -26,7 +26,7 @@ table{
 @media only screen and (max-width:700px){
 
 table{
-    margin-top: 350px !important;
+    margin-top: 420px !important;
 }
 .headd{
     font-size: 30px !important;
