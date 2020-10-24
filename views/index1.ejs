@@ -79,9 +79,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
         // Wrap every letter in a span
-            var textWrapper = document.querySelector('.ml6 .letters');
-            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
+            var textWrapper = document.querySelectorAll('.ml6 .letters');
+            textWrapper.forEach(item=>{
+                item.innerHTML = item.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+})
             anime.timeline({ loop: true })
                 .add({
                     targets: '.ml6 .letter',
@@ -96,6 +97,8 @@
                     easing: "easeOutExpo",
                     delay: 1000
                 });
+            
+            
     </script>
     <script src="animation.js"></script>
 </body>
