@@ -205,7 +205,7 @@ td{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .loader-wrapper {
-  width: fit-content;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -228,7 +228,7 @@ td{
 .loader-inner {
   vertical-align: top;
   display: inline-block;
-  width: 100%;
+  width: max-content;
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
