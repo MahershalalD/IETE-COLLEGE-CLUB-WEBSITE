@@ -306,3 +306,52 @@ td{
   display: inline-block;
   line-height: 1em;
 }
+
+.fa-caret-up {
+    position: relative;
+  animation: MoveUpown 1s linear infinite;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpown {
+  0%, 100% {
+    top: 20px;
+  }
+  80% {
+    top: 0px;
+  }
+}
+
+.fa-caret-down {
+    position: relative;
+  animation: MoveUpDown 1s linear infinite;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+    opacity: 0;
+  }
+  80% {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+.dash{
+    position: relative;
+  animation: MovepDown 1s linear infinite;
+  left: 0;
+  bottom: 0;
+}
+@keyframes MovepDown {
+  0%, 100% {
+    right: 0;
+  }
+  80% {
+    left: 10px;
+  }
+}
