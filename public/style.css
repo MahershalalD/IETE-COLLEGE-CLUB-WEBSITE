@@ -273,6 +273,9 @@ td{
     font-size: 15px;
     height: 100%; 
 }
+.teams{
+    width: 20%;
+}
 .heading{
     background-color: #182C61;
     font-size: 5px !important;
@@ -281,6 +284,7 @@ td{
 th{
     text-align: center;
     color: white;
+    font-size: 11px;
 }
 td{
     font-family: 'Quicksand', sans-serif;
