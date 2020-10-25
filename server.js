@@ -252,8 +252,8 @@ app.get('/admin',(req,res)=>{
                 item.previousposition = item.currentposition;
                 item.currentposition = 4;
             }
-            item.Total= item.nopaperp*10 + item.nopaperw*15 + item.noprojectd*15 + item.noprojectw*20;
-            item.save()
+            item.Total = item.nopaperp*10 + item.nopaperw*15+item.noprojectd*20+item.noprojectw*25+item.nopaperpiit*15+item.nopaperwiit*20+item.noprojectdiit*25+item.noprojectwiit*30+item.notechp*5+item.notechw*10+item.nospop*15+item.nospow*20+item.noculp*5+item.noculw*10+item.extra;
+            item.save();
         })
         Thirdyear.find({}, (err, foundd) => {
             const max = [];
@@ -278,7 +278,7 @@ app.get('/admin',(req,res)=>{
                     item.previousposition = item.currentposition;
                     item.currentposition = 4;
                 }
-                item.Total = item.nopaperp * 10 + item.nopaperw * 15 + item.noprojectd * 15 + item.noprojectw * 20;
+                item.Total = item.nopaperp*10 + item.nopaperw*15 + item.noprojectd*20 + item.noprojectw*25 + item.nopaperpiit*15 + item.nopaperwiit*20 + item.noprojectdiit*25 + item.noprojectwiit*30 + item.notechp*5 + item.notechw*10 + item.nospop*15 + item.nospow*20 + item.noculp*5 + item.noculw*10 + item.extra;
                 item.save()
                 
             })
