@@ -217,7 +217,7 @@ th, td{
 .dashboard{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 200px 100px;
+    grid-template-rows: 100px 200px 200px;
 }
 .event{
     grid-row: 2/3;
@@ -270,6 +270,10 @@ th, td{
     .evnet-name{
         margin:15px auto  !important ;
     }
+    .marks{
+    display: flex;
+    flex-direction: row;
+}
 }
 
 .evnet-name{
@@ -322,5 +326,6 @@ th, td{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    
     justify-content: center;
 }

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.secondpart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:tomato;
+}
+.evnet-name{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    margin: 15px;
+    justify-content: space-around;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    color: #57606f;
+    background-color:#fad390;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@media screen and (max-width: 768px){
+
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+}

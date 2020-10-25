@@ -900,7 +900,9 @@ app.get("/results-user", (req, res) => {
     })
 })
 
-
+app.get("/about",(req,res)=>{
+    res.sendFile(__dirname + "/public/about.html")
+})
 
 app.post('/del-comp',(req,res)=>{
     Event.findOne({ _id: req.body.compi }, function (err, foundList) {

@@ -15,9 +15,8 @@ nav{
 }
 .main{
     height: 100%;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-color:#fad390;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
     margin: 20px 10px;
     font-family: 'Tajawal', sans-serif;
@@ -28,9 +27,7 @@ nav{
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color:tomato;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -38,9 +35,7 @@ nav{
         padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-color:tomato;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .evnet-name{
@@ -49,8 +44,8 @@ nav{
     justify-content: space-around;
     font-family: 'Comfortaa', cursive;
     padding: 10px;
-    color: white;
-    background-color: #2C3A47;
+    color: #57606f;
+    background-color:#fad390;
     border-radius: 10px;
     font-size: 20px;
     margin-bottom: 15px;
@@ -65,8 +60,8 @@ nav{
     align-items: center;
     font-family: 'Comfortaa', cursive;
     padding: 10px;
-    color: white;
-    background-color: #2C3A47;
+     color: #57606f;
+    background-color:#fad390;
     border-radius: 10px;
     font-size: 17px;
     margin-bottom: 15px;
@@ -75,7 +70,7 @@ nav{
 .cross{
     background-color: transparent;
     border: none;
-    color: white;
+     color: #57606f;
 
 }
 .cross:hover{
