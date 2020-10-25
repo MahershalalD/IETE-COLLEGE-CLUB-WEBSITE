@@ -49,7 +49,8 @@
     <div class="main">
        <div class="main-container">
         <div class="eventName">
-            <h1>Kongu Engineering College,Perundurai,Erode-641305</h1>
+            <div style="background-image: linear-gradient(to right, #434343 0%, black 100%);padding: 30px;margin: 30px;">
+                <h1>Kongu Engineering College,Perundurai,Erode-641305</h1>
             <h2 style="margin-top: 20px;">Department of Electronics And Communication Engineering</h2>
             <h3 style="margin-top: 20px;">IETE STUDENT FORUM AND ECA ASSOCIATION</h3>
             <h4 style="margin-top: 20px;">Presents</h4>
@@ -62,13 +63,16 @@
             <h1><%= item.eventDate %></h1>
             <h2 style="font-style: italic;margin-top: 20px;">at</h2>
             <h1><%= item.eventPlace %></h1>
-            <hr style="border-bottom: 2px solid white;">
-            <h2 style="margin-top: 10px;">Events thats going to delight</h2>
+            </div>
+            <div style="background-color:#EE5A24;padding: 10px;margin: 30px;">
+               <h2>Events thats going to delight</h2>
             <ul style="display: flex;flex-direction: row;justify-content: center;flex-wrap: wrap;">
                 <% item.eventComp.map(item=>{ %>
                     <li style="padding: 10px;list-style: none;"><h2><%=item.name%></h2></li>
            <% }) %>
-            </ul>
+            </ul> 
+            </div>
+            
             
     </div> 
     </div>

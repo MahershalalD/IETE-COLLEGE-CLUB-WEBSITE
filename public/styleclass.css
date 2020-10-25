@@ -227,9 +227,7 @@ th, td{
     margin: 10px;
     height: 100%;
     border-radius: 10px;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: tomato;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .select{
@@ -284,8 +282,8 @@ th, td{
     justify-content: space-around;
     font-family: 'Open Sans', sans-serif;
     padding: 10px;
-    color: white;
-    background-color: #2C3A47;
+     color: #57606f;
+     background-color:#fad390 !important;
     border-radius: 10px;
     font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
@@ -293,9 +291,7 @@ th, td{
 .main{
     height: 100%;
     border-radius: 10px;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-color: tomato;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .class-name{
