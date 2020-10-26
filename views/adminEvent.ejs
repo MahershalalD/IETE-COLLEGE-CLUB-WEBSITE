@@ -87,7 +87,7 @@
                                         <div class="col-lg-3">
                                             <h5>Results-Planner------><%= needed %></h5>
                                         </div>
-                                    
+                                    </div>
                                     <hr style="border-bottom: 1px solid black;">
                                         <div class="row"> 
                   <% extra.map((item,index)=>{ %>
@@ -110,13 +110,10 @@
                             <option value="C">C</option>
                             <option value="D">D</option>
                         </select>
-                        
-                            <div class="input-group mb-3">
                                 <input type="hidden" value="<%= item.name %>" name="compName">
                                 <input type="hidden" value="<%= index %>" name="indexName">
                                 <input type="text" class="form-control mb-3" name="sname" placeholder="Student Name"
                                     aria-label="Recipient's username" >
-                                    <div class="input-group mb-3" aria-required="true">
                                     <input type="text" class="form-control mb-2" name="roll" placeholder="Roll No" aria-label="Recipient's username"></div>
                                     <input type="text" class="form-control mb-2" name="stopic" placeholder="Topic" aria-label="Recipient's username"></div>
                                     <input type="text" class="form-control mb-2" name="domain" placeholder="Domain" aria-label="Recipient's username"></div>
@@ -128,7 +125,6 @@
                         </div>
                 <% }) %>
             </div>
-        </div>
         <% } %>
     </div>
 </div>
