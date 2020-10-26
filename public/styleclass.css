@@ -217,7 +217,7 @@ th, td{
 .dashboard{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 200px 200px;
+    grid-template-rows: 100px 200px 100px;
 }
 .event{
     grid-row: 2/3;

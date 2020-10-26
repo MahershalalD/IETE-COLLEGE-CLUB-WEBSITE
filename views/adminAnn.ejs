@@ -119,43 +119,43 @@
                 <div class="col-lg-3">
                     <div class="evnet-name">
                         <h5>Event Name :</h5>
-                        <h5"><%=found.eventName %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventName %></h5>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="evnet-name">
                         <h5>Event Type :</h5>
-                        <h5"><%=found.eventType %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventType %></h5>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="evnet-name">
                         <h5>Event Date :</h5>
-                        <h5"><%=found.eventDate %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventDate %></h5>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="evnet-name">
                         <h5>Event Time :</h5>
-                        <h5"><%=found.eventTime %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventTime %></h5>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="evnet-name" style="display: flex;flex-direction: column;">
                         <h5>Event Chief Guest :</h5>
-                        <h5"><%=found.eventGuest %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventGuest %></h5>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="evnet-name" style="display: flex;flex-direction: column;">
                         <h5>Event In Presence of :</h5>
-                        <h5"><%=found.eventPresence %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventPresence %></h5>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="evnet-name">
                         <h5>Event Place :</h5>
-                        <h5"><%=found.eventPlace %></h5>
+                        <h5 style="color: #c0392b;"><%=found.eventPlace %></h5>
                     </div>
                 </div>
                 <% found.eventComp.forEach(function(founds,index){ %>
@@ -163,7 +163,7 @@
                     <div class="evnet-name1">
                         <div  style="height: 100%;">
                         <h5>Event Competitions <%= index+1 %> :</h5>
-                        <h5"><%= founds.name %></h5>
+                        <h6 style="color: #c0392b;"><%= founds.name %></h6>
                         </div>
                     <div style="padding: 10px;">
                         <form class="form_id<%= founds %>" action="/del-comp" method="POST">

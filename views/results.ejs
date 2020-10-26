@@ -88,16 +88,18 @@
             <div style="overflow-x:auto;">
             <table class="table table-bordered">
                     <tr>
-                        <th colspan="4" style="text-align: center;"><h2 class="eventN"><%= item.eventName %></h2></th>
+                        <th colspan="6" style="text-align: center;"><h2 class="eventN"><%= item.eventName %></h2></th>
                     </tr>
                     <tr>
-                        <th colspan="4" style="text-align: center;"><h2 class="compN"><%= item.compName %></h2></th>
+                        <th colspan="6" style="text-align: center;"><h2 class="compN"><%= item.compName %></h2></th>
                     </tr>
                     <tr>
                         <th scope="col" style="text-align: center;">Year</th>
                         <th scope="col" style="text-align: center;">Section</th>
+                        <th scope="col" style="text-align: center;">Roll.No</th>
                         <th scope="col" style="text-align: center;">Students Name</th>
                         <th scope="col" style="text-align: center;">Topic</th>
+                        <th scope="col" style="text-align: center;">Domain</th>
                     </tr>
                 <tbody>
                     <% item.compRes.map((items)=>{ %>
@@ -105,9 +107,10 @@
                     <tr>
                         <td><%= items.Year %></td>
                         <td><%= items.Section %></td>
+                        <td><%= items.Roll %></td>
                         <td><%= items.StudentName %></td>
                         <td><%= items.Topic %></td>
-            
+                        <td><%= items.Domain %></td>
                     </tr>
                     <%} %>
                     <%}) %>
@@ -116,8 +119,10 @@
                     <tr>
                         <td><%= items.Year %></td>
                         <td><%= items.Section %></td>
+                        <td><%= items.Roll %></td>
                         <td><%= items.StudentName %></td>
                         <td><%= items.Topic %></td>
+                        <td><%= items.Domain %></td>
                     </tr>
                     <%} %>
                     <%}) %>
@@ -126,8 +131,10 @@
                     <tr>
                         <td><%= items.Year %></td>
                         <td><%= items.Section %></td>
+                        <td><%= items.Roll %></td>
                         <td><%= items.StudentName %></td>
                         <td><%= items.Topic %></td>
+                        <td><%= items.Domain %></td>
                     </tr>
                     <%} %>
                     <%}) %>

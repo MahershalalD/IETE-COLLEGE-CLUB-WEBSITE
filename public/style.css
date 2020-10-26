@@ -347,15 +347,16 @@ td{
 
 .dash{
     position: relative;
+
   animation: MovepDown 1s linear infinite;
   left: 0;
   bottom: 0;
 }
 @keyframes MovepDown {
   0%, 100% {
-    opacity: 0%;
+    opacity: 0;
   }
-  50% {
-    opacity: 100%;
+  70% {
+    opacity: 1;
   }
 }

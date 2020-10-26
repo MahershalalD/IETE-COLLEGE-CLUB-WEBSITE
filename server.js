@@ -887,8 +887,10 @@ app.post("/result-m", (req, res) => {
     const per = {
         Year : req.body.years,
         Section : req.body.yearse,
+        Roll : req.body.roll,
         StudentName : req.body.sname,
-        Topic : req.body.stopic
+        Topic : req.body.stopic,
+        Domain :req.body.domain
     }
     Result.findOne({ compName: req.body.compName }, function (err, foundList) {
         foundList.compRes.push(per);
