@@ -226,10 +226,8 @@ app.get("/points-table",(req,res)=>{
     })
     
 })
-
-app.get('/admin',(req,res)=>{
-    if(req.isAuthenticated()){
-        Secondyear.find({}, (err, found) => {
+app.post("/update", (req, res) => {
+    Secondyear.find({}, (err, found) => {
         const max = [];
         found.forEach((item) => {
             max.push(item.Total)
@@ -252,6 +250,52 @@ app.get('/admin',(req,res)=>{
                 item.previousposition = item.currentposition;
                 item.currentposition = 4;
             }
+            item.save(); 
+            
+        })
+        res.redirect("/admin");
+})
+   
+})
+app.post("/update3",(req,res)=>{
+    Thirdyear.find({}, (err, foundd) => {
+        const max = [];
+        foundd.forEach((item) => {
+            max.push(item.Total)
+        })
+        max.sort(function (a, b) { return b - a })
+        foundd.forEach((item) => {
+            if (item.Total === max[0]) {
+                item.previousposition = item.currentposition;
+                item.currentposition = 1;
+            }
+            else if (item.Total === max[1]) {
+                item.previousposition = item.currentposition;
+                item.currentposition = 2;
+            }
+            else if (item.Total === max[2]) {
+                item.previousposition = item.currentposition;
+                item.currentposition = 3;
+            }
+            else if (item.Total === max[3]) {
+                item.previousposition = item.currentposition;
+                item.currentposition = 4;
+            }
+            item.save()
+        })
+        res.redirect("/admin");
+})
+
+})
+app.get('/admin',(req,res)=>{
+    if(req.isAuthenticated()){
+        Secondyear.find({}, (err, found) => {
+        const max = [];
+        found.forEach((item) => {
+            max.push(item.Total)
+        })
+        max.sort(function (a, b) { return b - a })
+        found.forEach((item) => {
             item.Total = item.nopaperp*10 + item.nopaperw*15+item.noprojectd*20+item.noprojectw*25+item.nopaperpiit*15+item.nopaperwiit*20+item.noprojectdiit*25+item.noprojectwiit*30+item.notechp*5+item.notechw*10+item.nospop*15+item.nospow*20+item.noculp*5+item.noculw*10+item.extra;
             item.save();
         })
@@ -262,25 +306,8 @@ app.get('/admin',(req,res)=>{
             })
             max.sort(function (a, b) { return b - a })
             foundd.forEach((item) => {
-                if (item.Total === max[0]) {
-                    item.previousposition = item.currentposition;
-                    item.currentposition = 1;
-                }
-                else if (item.Total === max[1]) {
-                    item.previousposition = item.currentposition;
-                    item.currentposition = 2;
-                }
-                else if (item.Total === max[2]) {
-                    item.previousposition = item.currentposition;
-                    item.currentposition = 3;
-                }
-                else if (item.Total === max[3]) {
-                    item.previousposition = item.currentposition;
-                    item.currentposition = 4;
-                }
                 item.Total = item.nopaperp*10 + item.nopaperw*15 + item.noprojectd*20 + item.noprojectw*25 + item.nopaperpiit*15 + item.nopaperwiit*20 + item.noprojectdiit*25 + item.noprojectwiit*30 + item.notechp*5 + item.notechw*10 + item.nospop*15 + item.nospow*20 + item.noculp*5 + item.noculw*10 + item.extra;
                 item.save()
-                
             })
             res.render("admin", { secondArray: found, thirdArray: foundd })
         })
