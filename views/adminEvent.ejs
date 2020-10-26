@@ -87,7 +87,7 @@
                                         <div class="col-lg-3">
                                             <h5>Results-Planner------><%= needed %></h5>
                                         </div>
-                                    </div>
+                                    
                                     <hr style="border-bottom: 1px solid black;">
                                         <div class="row"> 
                   <% extra.map((item,index)=>{ %>
@@ -122,14 +122,13 @@
                                     <input type="text" class="form-control mb-2" name="domain" placeholder="Domain" aria-label="Recipient's username"></div>
                                 <div class="input-group ">
                                     <button class="btn btn-danger " name="UniqueId" value="<%= foun %>" type="submit">Add</button>
-                                </div>
+                                </div></form>
                             </div>
-                    
                     </div>
                         </div>
-                </form>
                 <% }) %>
             </div>
+        </div>
         <% } %>
     </div>
 </div>
