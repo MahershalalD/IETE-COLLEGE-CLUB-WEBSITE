@@ -353,9 +353,9 @@ td{
 }
 @keyframes MovepDown {
   0%, 100% {
-    right: 0;
+    opacity: 30%;
   }
   80% {
-    left: 10px;
+    opacity: 100%;
   }
 }
