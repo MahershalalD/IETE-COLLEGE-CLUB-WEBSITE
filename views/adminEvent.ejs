@@ -89,7 +89,7 @@
                                         </div>
                                     </div>
                                     <hr style="border-bottom: 1px solid black;">
-                                        <div class="row"> 
+                                    <div class="row"> 
                   <% extra.map((item,index)=>{ %>
                         <div class="col-lg-3">
                             <form action="/result-m" method="POST">
@@ -110,30 +110,27 @@
                             <option value="C">C</option>
                             <option value="D">D</option>
                         </select>
-                        
-                            <div class="input-group mb-3">
                                 <input type="hidden" value="<%= item.name %>" name="compName">
                                 <input type="hidden" value="<%= index %>" name="indexName">
+                                <div class="input-group mb-3">
                                 <input type="text" class="form-control mb-3" name="sname" placeholder="Student Name"
                                     aria-label="Recipient's username" >
                                     </div>
                                     <div class="input-group mb-3" aria-required="true">
-                                    <input type="text" class="form-control mb-2" name="roll" placeholder="Roll No" aria-label="Recipient's username"></div>
-                                    </div>
+                                    <input type="text" class="form-control mb-3" name="roll" placeholder="Roll No" aria-label="Recipient's username"></div>
                                     <div class="input-group mb-3" aria-required="true">
-                                    <input type="text" class="form-control mb-2" name="stopic" placeholder="Topic" aria-label="Recipient's username"></div>
-                                    </div>
+                                    <input type="text" class="form-control mb-3" name="stopic" placeholder="Topic" aria-label="Recipient's username"></div>
                                     <div class="input-group mb-3" aria-required="true">
-                                    <input type="text" class="form-control mb-2" name="domain" placeholder="Domain" aria-label="Recipient's username"></div>
-                                        </div>
+                                    <input type="text" class="form-control mb-3" name="domain" placeholder="Domain" aria-label="Recipient's username"></div>
                                     <div class="input-group ">
                                     <button class="btn btn-danger " name="UniqueId" value="<%= foun %>" type="submit">Add</button>
                                 </div></form>
-                </div>
+                                </div>
+                        </div>
                 <% }) %>
-            </div>
-        </div>
-        <% } %>
+                </div>
+            <% } %>
+    </div>
     </div>
 </div>
    
