@@ -161,9 +161,8 @@ body{
     grid-row: 3/4;
     width: 100%;
     font-size: 20px;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-color: tomato;
+
     height: 100%; 
     border-collapse: collapse;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
@@ -172,23 +171,20 @@ body{
     grid-row: 4/5;
     width: 100%;
     font-size: 20px;
-    background: #f85032;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color:tomato;
+    
     height: 100%; 
     border-collapse: collapse;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .heading{
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color:#fad390;
     font-size: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 th{
     text-align: center;
-    color: white;
+    color: #57606f;
     font-family: 'Quicksand', sans-serif;
     letter-spacing: 1px;
 }
@@ -274,7 +270,7 @@ td{
     height: 100%; 
 }
 .heading{
-    background-color: #182C61;
+    background-color: #fad390;
     font-size: 5px !important;
     padding: 5px;
 }
@@ -283,7 +279,7 @@ td{
 }
 th{
     text-align: center;
-    color: white;
+    color: #57606f;
     font-size: 11px;
 }
 td{

@@ -52,13 +52,13 @@
         <div >
             <table class="notice-manage">
                 <tr>
-                    <th colspan="2" style="text-align: center;margin-bottom: 5px;">Notice Board</th>
+                    <th colspan="2" style="text-align: center;margin-bottom: 5px;color: white;">Notice Board</th>
                 </tr>
                 <% foundArray.forEach((item)=>{ %>
                     <tr>
-                         <th class="notice-date"><h3 style="font-size: 30px;"><%=item.date[8]+item.date[9]%></h3><hr style="border-bottom: 1px solid white;"><%=item.time%></th>
+                         <th class="notice-date" style="color: white;"><h3 style="font-size: 30px;color: white;"><%=item.date[8]+item.date[9]%></h3><hr style="border-bottom: 1px solid white;"><%=item.time%></th>
                         <th>
-                            <h3 class="ml6">
+                            <h3 class="ml6" style="color: white;">
                                 <span class="text-wrapper">
                                     <span class="letters"><%=item.content%>
                                         </span>

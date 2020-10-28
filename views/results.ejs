@@ -94,6 +94,7 @@
                         <th colspan="6" style="text-align: center;"><h2 class="compN"><%= item.compName %></h2></th>
                     </tr>
                     <tr>
+                        <th scope="col" style="text-align: center;">S.No</th>
                         <th scope="col" style="text-align: center;">Year</th>
                         <th scope="col" style="text-align: center;">Section</th>
                         <th scope="col" style="text-align: center;">Roll.No</th>
@@ -102,9 +103,12 @@
                         <th scope="col" style="text-align: center;">Domain</th>
                     </tr>
                 <tbody>
+                    <% var x = 0 %>
                     <% item.compRes.map((items)=>{ %>
                     <% if(items.Year==="Second" ){ %>
+                        <% x=x+1 %>
                     <tr>
+                        <td><%= x %></td>
                         <td><%= items.Year %></td>
                         <td><%= items.Section %></td>
                         <td><%= items.Roll %></td>
@@ -114,9 +118,12 @@
                     </tr>
                     <%} %>
                     <%}) %>
+                    <% var s = x %>
                     <% item.compRes.map((items,index)=>{ %>
                     <% if(items.Year==="Third" ){ %>
+                        <% s=s+1 %>
                     <tr>
+                        <td><%= s %></td>
                         <td><%= items.Year %></td>
                         <td><%= items.Section %></td>
                         <td><%= items.Roll %></td>
@@ -126,9 +133,12 @@
                     </tr>
                     <%} %>
                     <%}) %>
+                    <% var f = s %>
                     <% item.compRes.map((items,index)=>{ %>
                     <% if(items.Year==="Fourth" ){ %>
+                        <% f=f+1 %>
                     <tr>
+                        <td><%= f %></td>
                         <td><%= items.Year %></td>
                         <td><%= items.Section %></td>
                         <td><%= items.Roll %></td>

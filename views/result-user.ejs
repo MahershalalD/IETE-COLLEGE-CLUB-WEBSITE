@@ -48,6 +48,7 @@
     </div>
     <div class="table-manage">
     <% neededArray.forEach(item=>{ %>
+        
         <% if(item.releaseqotta==="YES" ){ %>
             <div class="tt">
                 <table class="tablee">
@@ -58,6 +59,7 @@
                 <th colspan="6" style="text-align: center;"><h3><%= item.compName %></h3></th>
             </tr>
             <tr>
+                <th>S.No</th>
                 <th>Year</th>
                 <th>Section</th>
                 <th>Roll.No</th>
@@ -65,10 +67,13 @@
                 <th>Topic</th>
                 <th>Domain</th>
             </tr>
-            
+            <% var x = 0 %>
             <% item.compRes.map((items)=>{ %>
+               
             <% if(items.Year==="Second" ){ %>
+                 <% x=x+1 %>
             <tr>
+                <td><%= x %></td>
                 <td><%= items.Year %></td>
                 <td><%= items.Section %></td>
                 <td><%= items.Roll %></td>
@@ -79,9 +84,13 @@
             </tr>
             <%} %>
             <%}) %>
+            <% var s = x %>
             <% item.compRes.map((items,index)=>{ %>
+                
             <% if(items.Year==="Third" ){ %>
+                <% s=s+1 %>
             <tr>
+                <td><%= s %></td>
                 <td><%= items.Year %></td>
                 <td><%= items.Section %></td>
                 <td><%= items.Roll %></td>
@@ -91,9 +100,12 @@
             </tr>
             <%} %>
             <%}) %>
+            <% var f = s %>
             <% item.compRes.map((items,index)=>{ %>
             <% if(items.Year==="Fourth" ){ %>
+                <% f=f+1 %>
             <tr>
+                <td><%= f %></td>
                 <td><%= items.Year %></td>
                 <td><%= items.Section %></td>
                 <td><%= items.Roll %></td>
