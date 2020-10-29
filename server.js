@@ -319,14 +319,14 @@ app.get('/admin',(req,res)=>{
     
 })
 app.get('/adminAnn', (req, res) => {
-    if(req.isAuthenticated()){
+    // if(req.isAuthenticated()){
           Event.find({}, (err, found) => {
         res.render("adminAnn", {eventArray:found});
 }) 
-    }
-    else{
-        res.redirect("/log");
-    }
+    // }
+    // else{
+    //     res.redirect("/log");
+    // }
  
 })
 
@@ -362,9 +362,11 @@ app.post("/class",(req,res)=>{
 
 
 app.post("/addComp",(req,res)=>{
+    console.log(req.body);
     const compi= {
         name: req.body.comp,
-        result : []
+        result : [],
+        link: req.body.link
     }
     const result = new Result({
         releaseqotta: "NO",
@@ -378,7 +380,7 @@ app.post("/addComp",(req,res)=>{
         foundList.eventComp.push(compi);
         foundList.save();
         res.redirect("/adminAnn");
-    });
+    }); 
 })
 app.post("/event-manager",(req,res)=>{
     const event = new Event({

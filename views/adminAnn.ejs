@@ -163,7 +163,13 @@
                     <div class="evnet-name1">
                         <div  style="height: 100%;">
                         <h5>Event Competitions <%= index+1 %> :</h5>
+                        <% if(founds.link===""){ %>
+                         <h6 style="color: #c0392b;"><%= founds.name %></h6>
+                       <% } else { %>
                         <h6 style="color: #c0392b;"><%= founds.name %></h6>
+                        <p style="color: #009432;">Link Added  <a href="<%=founds.link%>"><i class="fa fa-link"></i></a></p>
+                      <% } %>
+                        
                         </div>
                     <div style="padding: 10px;">
                         <form class="form_id<%= founds %>" action="/del-comp" method="POST">
@@ -184,10 +190,12 @@
                         <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="comp" placeholder="Competitions Name" aria-label="Recipient's username"
                                     aria-describedby="button-addon2">
+                                    <input type="text" class="form-control" name="link" placeholder="Link For Registration" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
                                     <input  type="hidden" name="eventId" value="<%= found._id %>">
                                     <input type="hidden" name="eventName" value="<%= found.eventName %>">
                                 <div class="input-group-append">
-                                    <button class="btn btn-danger" name="UniqueId" value="<%= found._id %>" type="submit">+</button>
+                                    <button class="btn btn-danger gg" name="UniqueId" value="<%= found._id %>" type="submit">+</button>
                                 </div>
                             </div>
                         </form>
@@ -215,7 +223,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <script src="ani.js"></script>
+    <script src="anig.js"></script>
 </body>
 
 </html>
