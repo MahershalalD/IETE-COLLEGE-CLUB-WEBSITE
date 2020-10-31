@@ -48,34 +48,42 @@
     <% eventArray.forEach((item)=>{ %>
     <div class="main">
        <div class="main-container">
-        <div class="eventName">
-            <div style="background-image: linear-gradient(to right, #434343 0%, black 100%);padding: 30px;margin: 30px;">
-            <h1>Kongu Engineering College,Perundurai,Erode-641305</h1>
-            <h2 style="margin-top: 20px;">Department of Electronics And Communication Engineering</h2>
-            <h3 style="margin-top: 20px;">IETE STUDENT FORUM AND ECA ASSOCIATION</h3>
-            <h4 style="margin-top: 20px;">Presents</h4>
-            <h1 style="font-size: 60px;color: #eb4d4b;"><%= item.eventName %></h1>
-           <h2 style="font-style: italic;margin-top: 20px;">Chief Guest</h2> 
-           <h1><%= item.eventGuest %></h1>
-            <h2 style="font-style: italic;margin-top: 20px;">In the Presence of</h2>
-            <h1 ><%= item.eventPresence %></h1>
-            <h2 style="font-style: italic;margin-top: 20px;">on</h2>
-            <h1><%= item.eventDate %></h1>
-            <h2 style="font-style: italic;margin-top: 20px;">at</h2>
-            <h1><%= item.eventPlace %></h1>
+        <div class="secondpart">
+            <div class="evnet-name">
+                <h4>Event Name</h4>
+                <h4 style="color: #c0392b;"><%= item.eventName %></h4>
             </div>
-            <div style="background-color:#EE5A24;padding: 10px;margin: 30px;text-align: center;">
-               <h2>Events thats going to delight</h2>
-            <ul style="display: flex;flex-direction: row;justify-content: center;flex-wrap: wrap;">
-                <% item.eventComp.map(item=>{ %>
-                    <li style="padding: 10px;list-style: none;"><h2><%=item.name%></h2></li>
+            <div class="evnet-name">
+                <h4>Event Type</h4>
+                <h4 style="color: #c0392b;"><%=item.eventType%></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>Event Date</h4>
+                <h4 style="color: #c0392b;"><%= item.eventDate %></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>Cheif Guest</h4>
+                <h4 style="color: #c0392b;"><%=item.eventGuest%></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>In Presence of</h4>
+                <h4 style="color: #c0392b;"><%= item.eventPresence %></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>Event Place</h4>
+                <h4 style="color: #c0392b;"><%= item.eventPlace %></h4>
+            </div>
+            <% item.eventComp.forEach((items,index)=>{ %>
+                <div class="evnet-name1">
+                <h4>Event Competition <%=index+1%></h4>
+                <h4 style="color: #c0392b;"><%=items.name%></h4>
+                <% if(items.link!=" "){ %>
+                   <a href="<%= items.link %>"><button class="btn-reg">Register</button></a> 
+               <% } %>
+            </div>
            <% }) %>
-            </ul> 
-            </div>
             
-            
-    </div> 
-    </div>
+        </div>
    <% }) %>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
