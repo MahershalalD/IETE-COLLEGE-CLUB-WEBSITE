@@ -319,14 +319,14 @@ app.get('/admin',(req,res)=>{
     
 })
 app.get('/adminAnn', (req, res) => {
-    // if(req.isAuthenticated()){
+    if(req.isAuthenticated()){
           Event.find({}, (err, found) => {
         res.render("adminAnn", {eventArray:found});
 }) 
-    // }
-    // else{
-    //     res.redirect("/log");
-    // }
+    }
+    else{
+        res.redirect("/log");
+    }
  
 })
 
@@ -851,22 +851,28 @@ app.post("/extrat", (req, res) => {
     })
 })
 app.get("/admin-event", (req, res) => {
+    const extra = [ ];
+    const foun = [ ];
+    const name = [ ];
     if(req.isAuthenticated()){
-       Event.find({ }, (err, found) => {
+       Event.find({}, (err, found) => {
         if(found.length===0){
             res.sendFile(__dirname + "/public/noinfo.html")
-        
         }
         else{
             found.forEach((founds) => {
+               extra.push(founds.eventComp)
+                foun.push(founds._id)
+                name.push(founds.eventName)
+            })
                 res.render("adminEvent", {
                     adminEventArray: found,
                     needed: temp_result,
-                    extra: founds.eventComp,
-                    foun: founds._id,
-                    name: founds.eventName
+                    extra: extra,
+                    foun: foun,
+                    name: name
                 })
-            })
+            
         }
         }) 
     }

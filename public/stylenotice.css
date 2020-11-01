@@ -28,19 +28,36 @@ table{
 .notice-dat{
     align-items: center;
 }
+.letters{
+    color: #fee900;
+    text-shadow: 2px 2px 4px #000000;
+}
 @media only screen and (max-width:700px){
-
+    .fe{
+        color: white !important;
+    }
+.letters{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
 table{
-    margin-top: 380px !important;
+    margin-top: 300px !important;
 }
-.headd{
-    font-size: 30px !important;
+.img-head{
+    width: 50px;
+    height: 50px;
 }
-.head{
-    font-size: 40px !important;
+.text-head{
+    font-size: 13px !important;
+    text-align: center;
+    letter-spacing: 3px;
 }
-.headdd{
-    font-size: 20px !important;
+.headimg{
+    margin-top: 100px !important;
+}
+.text1-head{
+    margin-top: 10px;
+    font-size: 10px;
 }
 }
 .btn-res{
