@@ -31,17 +31,18 @@
             </div>
             <ul class="navbar-items">
                 <li>
-                    <a href="/points-table">Points-Table</a>
-                </li>
-                <li>
-                    <a href="/classper">Class Performance</a>
-                </li>
-                <li>
                     <a href="/event">Events</a>
                 </li>
                 <li>
                     <a href="/results-user">Results</a>
                 </li>
+                <li>
+                    <a href="/classper">Class Performance</a>
+                </li>
+                <li>
+                    <a href="/points-table">Points-Table</a>
+                </li>
+                
                 <li>
                     <a href="/about">About</a>
                 </li>
@@ -101,7 +102,7 @@
             <div class="secondpart">
                 <div class="evnet-name">
                     <h4>Position</h4>
-                    <h4>
+                    <h4 style='color: #c0392b;'>
                        <% if(item.currentposition ===1){ %>
                             0<%= item.currentposition %> <p style="font-size: 15px;color: #4cd137; font-style: italic;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Winning Position </p> 
                        <% }else{ %>
