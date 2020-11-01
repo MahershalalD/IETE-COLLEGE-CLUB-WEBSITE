@@ -279,6 +279,7 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
     margin: 5px;
     font-size: 20px;
     /* border: 1px solid #57606f; */
+    overflow-x: auto;
 }
 .main_con{
     grid-row: 2/3;
