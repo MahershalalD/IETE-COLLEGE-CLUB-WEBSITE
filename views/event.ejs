@@ -56,23 +56,28 @@
             <table class="tab">
                
                 <tr>
-                    <td>Event Type</td>
+                    <td>Event Type </td>
+                    <td>:</td>
                     <td><%=item.eventType%></td>
                 </tr>
                 <tr>
-                    <td>Event Date</td>
+                    <td>Event Date </td>
+                    <td>:</td>
                     <td><%= item.eventDate %></td>
                 </tr>
                 <tr>
-                    <td>Guest Name</td>
+                    <td>Guest Name </td>
+                    <td>:</td>
                     <td><%=item.eventGuest%></td>
                 </tr>
                 <tr>
-                    <td>In Presence Of</td>
+                    <td>In Presence Of </td>
+                    <td>:</td>
                     <td><%= item.eventPresence %></td>
                     <% item.eventComp.forEach((items,index)=>{ %>
                 <tr>
-                    <td>Event Competition <%= index+1 %></td>
+                    <td>Event Competition <%= index+1 %> </td>
+                    <td>:</td>
                     <td><%= items.name %>
                         <% if(items.link!==""){ %>
                         <a href="<%= items.link %>"><button class="btn-reg">Register</button></a>

@@ -270,30 +270,28 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 }
 .grid-man{
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 80px 1fr;
 }
 .tab{
     margin: 5px;
     width: 100%;
     font-size: 20px;
-    border-collapse: collapse;
     /* border: 1px solid #57606f; */
 }
 .main_con{
     grid-row: 2/3;
-    
+    margin: auto;
 }
 .con_head{
   width: fit-content;
     height: 100%;
     background-color:#fad390;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin:30px auto ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);  
 }
 td{
-    border: 1px solid #57606f;
     color: #ff3838; 
     padding: 8px;
     font-family: 'Open Sans', sans-serif;
