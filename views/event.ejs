@@ -45,54 +45,46 @@
             </ul>
         </nav>
     </div>
- 
-<div class="grid-man"> 
-    <div class="main_con">
-        <% eventArray.forEach((item)=>{ %> 
-        <div class="con_head">
-            <h2><%=item.eventName%></h2>
-        
-        <div>
-            <table class="tab">
-               
-                <tr>
-                    <td>Event Type </td>
-                    <td>:</td>
-                    <td><%=item.eventType%></td>
-                </tr>
-                <tr>
-                    <td>Event Date </td>
-                    <td>:</td>
-                    <td><%= item.eventDate %></td>
-                </tr>
-                <tr>
-                    <td>Guest Name </td>
-                    <td>:</td>
-                    <td><%=item.eventGuest%></td>
-                </tr>
-                <tr>
-                    <td>In Presence Of </td>
-                    <td>:</td>
-                    <td><%= item.eventPresence %></td>
-                    <% item.eventComp.forEach((items,index)=>{ %>
-                <tr>
-                    <td>Event Competition <%= index+1 %> </td>
-                    <td>:</td>
-                    <td><%= items.name %>
-                        <% if(items.link!==""){ %>
-                        <a href="<%= items.link %>"><button class="btn-reg">Register</button></a>
-                        <% } %>
-                </tr>
-                <% })%>
-            </td>
-            </table>
+    <% eventArray.forEach((item)=>{ %>
+    <div class="main">
+       <div class="main-container">
+        <div class="secondpart">
+            <div class="evnet-name">
+                <h4>Event Name</h4>
+                <h4 style="color: #c0392b;"><%= item.eventName %></h4>
             </div>
+            <div class="evnet-name">
+                <h4>Event Type</h4>
+                <h4 style="color: #c0392b;"><%=item.eventType%></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>Event Date</h4>
+                <h4 style="color: #c0392b;"><%= item.eventDate %></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>Cheif Guest</h4>
+                <h4 style="color: #c0392b;"><%=item.eventGuest%></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>In Presence of</h4>
+                <h4 style="color: #c0392b;"><%= item.eventPresence %></h4>
+            </div>
+            <div class="evnet-name">
+                <h4>Event Place</h4>
+                <h4 style="color: #c0392b;"><%= item.eventPlace %></h4>
+            </div>
+            <% item.eventComp.forEach((items,index)=>{ %>
+                <div class="evnet-name1">
+                <h4>Event Competition <%=index+1%></h4>
+                <h4 style="color: #c0392b;"><%=items.name%></h4>
+                <% if(items.link!==""){ %>
+                   <a href="<%= items.link %>"><button class="btn-reg">Register</button></a> 
+               <% } %>
+            </div>
+           <% }) %>
+            
         </div>
-        <% })%>
-        
-    </div>
-</div>
-   
+   <% }) %>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
     <script src="animation.js"></script>
