@@ -22,7 +22,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://iete2001:Lxum9WVDzDLTiHa8@cluster0.7ujqs.mongodb.net/iete', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://XXXXXX:XXXXXXXXXX@clusterX.7ujqs.mongodb.net/iete', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex',true);
 const SecondclassSchema = {
@@ -989,6 +989,7 @@ app.post("/delete-notice", (req, res) => {
                 }
     })
 })
+
 
 let port = process.env.PORT;
 if (port == null || port == "") {
